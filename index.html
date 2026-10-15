@@ -3,1383 +3,1383 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nirwana Baby Shop</title>
+    <title>Nirwana Baby Shop</title>
 
-<style>
-
-/* =====================================================
+    <style>
+        /* =====================================================
    BASIC
 ===================================================== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#fffaf7;
-    color:#444;
-}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fffaf7;
+            color: #444;
+        }
 
-button{
-    font-family:inherit;
-    cursor:pointer;
-}
+        button {
+            font-family: inherit;
+            cursor: pointer;
+        }
 
-img{
-    max-width:100%;
-}
+        img {
+            max-width: 100%;
+        }
 
 
-/* =====================================================
+        /* =====================================================
    SCREEN SYSTEM
 ===================================================== */
 
-.screen{
-    display:none;
-    min-height:100vh;
-}
+        .screen {
+            display: none;
+            min-height: 100vh;
+        }
 
-.screen.active{
-    display:block;
-}
+        .screen.active {
+            display: block;
+        }
 
 
-/* =====================================================
+        /* =====================================================
    HEADER
 ===================================================== */
 
-header{
-    height:75px;
-    background:#ffffff;
-    border-bottom:1px solid #eeeeee;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 6%;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
+        header {
+            height: 75px;
+            background: #ffffff;
+            border-bottom: 1px solid #eeeeee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    color:#527db5;
-}
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #527db5;
+        }
 
-.logo span{
-    color:#f39090;
-}
+        .logo span {
+            color: #f39090;
+        }
 
-.header-right{
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-.home-btn{
-    border:none;
-    background:none;
-    font-size:14px;
-    color:#555;
-}
+        .home-btn {
+            border: none;
+            background: none;
+            font-size: 14px;
+            color: #555;
+        }
 
-.cart-button{
-    border:none;
-    background:#f7eeee;
-    border-radius:50px;
-    padding:10px 17px;
-    color:#555;
-    position:relative;
-}
+        .cart-button {
+            border: none;
+            background: #f7eeee;
+            border-radius: 50px;
+            padding: 10px 17px;
+            color: #555;
+            position: relative;
+        }
 
-.cart-number{
-    background:#f39a9a;
-    color:white;
-    border-radius:50%;
-    font-size:10px;
-    min-width:19px;
-    height:19px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:absolute;
-    top:-5px;
-    right:-5px;
-}
+        .cart-number {
+            background: #f39a9a;
+            color: white;
+            border-radius: 50%;
+            font-size: 10px;
+            min-width: 19px;
+            height: 19px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+        }
 
 
-/* =====================================================
+        /* =====================================================
    HOME
 ===================================================== */
 
-.home-content{
-    width:90%;
-    max-width:1250px;
-    margin:auto;
-}
+        .home-content {
+            width: 90%;
+            max-width: 1250px;
+            margin: auto;
+        }
 
 
-/* =====================================================
+        /* =====================================================
    HERO
 ===================================================== */
 
-.hero{
-    margin-top:25px;
-    height:340px;
-    border-radius:25px;
-    overflow:hidden;
-    background:
-        linear-gradient(
-            120deg,
-            #ffe0df,
-            #dff0ed
-        );
-    position:relative;
-}
+        .hero {
+            margin-top: 25px;
+            height: 340px;
+            border-radius: 25px;
+            overflow: hidden;
+            background:
+                linear-gradient(120deg,
+                    #ffe0df,
+                    #dff0ed);
+            position: relative;
+        }
 
-.hero-slide{
-    display:none;
-    height:100%;
-    align-items:center;
-    justify-content:space-between;
-    padding:45px 8%;
-}
+        .hero-slide {
+            display: none;
+            height: 100%;
+            align-items: center;
+            justify-content: space-between;
+            padding: 45px 8%;
+        }
 
-.hero-slide.active{
-    display:flex;
-}
+        .hero-slide.active {
+            display: flex;
+        }
 
-.hero-text{
-    max-width:520px;
-}
+        .hero-text {
+            max-width: 520px;
+        }
 
-.hero-text small{
-    color:#777;
-    letter-spacing:1px;
-}
+        .hero-text small {
+            color: #777;
+            letter-spacing: 1px;
+        }
 
-.hero-text h1{
-    color:#5181c0;
-    font-size:40px;
-    margin:12px 0;
-}
+        .hero-text h1 {
+            color: #5181c0;
+            font-size: 40px;
+            margin: 12px 0;
+        }
 
-.hero-text p{
-    color:#666;
-    line-height:1.6;
-    margin-bottom:20px;
-}
+        .hero-text p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
 
-.primary-btn{
-    background:#5683b7;
-    border:none;
-    color:white;
-    padding:13px 25px;
-    border-radius:25px;
-}
+        .primary-btn {
+            background: #5683b7;
+            border: none;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 25px;
+        }
 
-.hero-picture{
-    width:290px;
-    height:220px;
-    background:rgba(255,255,255,.55);
-    border-radius:25px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:90px;
-}
+        .hero-picture {
+            width: 290px;
+            height: 220px;
+            background: rgba(255, 255, 255, .55);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 90px;
+        }
 
-.hero-dots{
-    position:absolute;
-    bottom:15px;
-    left:50%;
-    transform:translateX(-50%);
-    display:flex;
-    gap:8px;
-}
+        .hero-dots {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
 
-.hero-dot{
-    width:9px;
-    height:9px;
-    background:#aaa;
-    border-radius:50%;
-}
+        .hero-dot {
+            width: 9px;
+            height: 9px;
+            background: #aaa;
+            border-radius: 50%;
+        }
 
-.hero-dot.active{
-    background:#5082a9;
-}
+        .hero-dot.active {
+            background: #5082a9;
+        }
 
 
-/* =====================================================
+        /* =====================================================
    CATEGORY HOME
 ===================================================== */
 
-.category-section{
-    padding:55px 0;
-}
+        .category-section {
+            padding: 55px 0;
+        }
 
-.section-title{
-    text-align:center;
-    margin-bottom:30px;
-}
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-.section-title h2{
-    color:#3f758e;
-    font-size:28px;
-}
+        .section-title h2 {
+            color: #3f758e;
+            font-size: 28px;
+        }
 
-.section-title p{
-    color:#999;
-    margin-top:7px;
-}
+        .section-title p {
+            color: #999;
+            margin-top: 7px;
+        }
 
-.categories{
-    display:flex;
-    justify-content:center;
-    gap:35px;
-    overflow-x:auto;
-    padding:10px;
-}
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            overflow-x: auto;
+            padding: 10px;
+        }
 
-.category-item{
-    min-width:110px;
-    text-align:center;
-    border:none;
-    background:none;
-}
+        .category-item {
+            min-width: 110px;
+            text-align: center;
+            border: none;
+            background: none;
+        }
 
-.category-circle{
-    width:95px;
-    height:95px;
-    border-radius:50%;
-    background:#f5dedb;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:auto;
-    border:3px solid transparent;
-    overflow:hidden;
-    transition:.25s;
-}
+        .category-circle {
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
+            background: #f5dedb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            border: 3px solid transparent;
+            overflow: hidden;
+            transition: .25s;
+        }
 
-.category-item:hover .category-circle{
-    transform:translateY(-7px);
-    border-color:#4979a1;
-}
+        .category-item:hover .category-circle {
+            transform: translateY(-7px);
+            border-color: #4979a1;
+        }
 
-.category-circle img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
+        .category-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-.category-emoji{
-    font-size:42px;
-}
+        .category-emoji {
+            font-size: 42px;
+        }
 
-.category-name{
-    margin-top:12px;
-    font-weight:bold;
-}
+        .category-name {
+            margin-top: 12px;
+            font-weight: bold;
+        }
 
 
-/* =====================================================
+        /* =====================================================
    PROMO
 ===================================================== */
 
-.promo{
-    background:#dff0ed;
-    border-radius:22px;
-    padding:30px;
-    text-align:center;
-    margin-bottom:50px;
-}
+        .promo {
+            background: #dff0ed;
+            border-radius: 22px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
 
-.promo h2{
-    color:#387298;
-    margin-bottom:8px;
-}
+        .promo h2 {
+            color: #387298;
+            margin-bottom: 8px;
+        }
 
-.promo p{
-    color:#777;
-}
+        .promo p {
+            color: #777;
+        }
 
 
-/* =====================================================
+        /* =====================================================
    FEATURES
 ===================================================== */
 
-.features{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-    padding-bottom:60px;
-}
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding-bottom: 60px;
+        }
 
-.feature{
-    background:white;
-    border:1px solid #eee;
-    border-radius:18px;
-    padding:25px;
-    text-align:center;
-}
+        .feature {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 18px;
+            padding: 25px;
+            text-align: center;
+        }
 
-.feature-icon{
-    font-size:35px;
-    margin-bottom:10px;
-}
+        .feature-icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
 
-.feature h3{
-    font-size:15px;
-    margin-bottom:7px;
-}
+        .feature h3 {
+            font-size: 15px;
+            margin-bottom: 7px;
+        }
 
-.feature p{
-    color:#999;
-    font-size:13px;
-}
+        .feature p {
+            color: #999;
+            font-size: 13px;
+        }
 
 
-/* =====================================================
+        /* =====================================================
    FOOTER
 ===================================================== */
 
-footer{
-    background:#396496;
-    color:white;
-    padding:45px 7% 25px;
-}
+        footer {
+            background: #396496;
+            color: white;
+            padding: 45px 7% 25px;
+        }
 
-.footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr 1fr;
-    gap:35px;
-}
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 35px;
+        }
 
-footer h2{
-    margin-bottom:15px;
-}
+        footer h2 {
+            margin-bottom: 15px;
+        }
 
-footer h3{
-    font-size:15px;
-    margin-bottom:12px;
-}
+        footer h3 {
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
 
-footer p,
-footer li{
-    color:#d5e5e3;
-    font-size:13px;
-    line-height:1.8;
-}
+        footer p,
+        footer li {
+            color: #d5e5e3;
+            font-size: 13px;
+            line-height: 1.8;
+        }
 
-footer ul{
-    list-style:none;
-}
+        footer ul {
+            list-style: none;
+        }
 
-.copyright{
-    border-top:1px solid rgba(255,255,255,.2);
-    text-align:center;
-    margin-top:30px;
-    padding-top:20px;
-    font-size:12px;
-    color:#c7d8d6;
-}
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, .2);
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            font-size: 12px;
+            color: #c7d8d6;
+        }
 
 
-/* =====================================================
+        /* =====================================================
    CATEGORY PAGE
 ===================================================== */
 
-.page-container{
-    width:90%;
-    max-width:1050px;
-    margin:30px auto 70px;
-}
+        .page-container {
+            width: 90%;
+            max-width: 1050px;
+            margin: 30px auto 70px;
+        }
 
-.back-button{
-    border:none;
-    background:white;
-    border:1px solid #ddd;
-    padding:10px 18px;
-    border-radius:20px;
-    margin-bottom:25px;
-}
+        .back-button {
+            border: none;
+            background: white;
+            border: 1px solid #ddd;
+            padding: 10px 18px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+        }
 
-.category-heading{
-    background:#dff0ed;
-    border-radius:20px;
-    padding:30px;
-    text-align:center;
-    margin-bottom:35px;
-}
+        .category-heading {
+            background: #dff0ed;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
 
-.category-heading h1{
-    color:#3979aa;
-    margin-bottom:8px;
-}
+        .category-heading h1 {
+            color: #3979aa;
+            margin-bottom: 8px;
+        }
 
-.category-heading p{
-    color:#777;
-}
+        .category-heading p {
+            color: #777;
+        }
 
 
-/* =====================================================
+        /* =====================================================
    GENDER TITLE
 ===================================================== */
 
-.gender-title{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    margin:35px 0 18px;
-}
+        .gender-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 35px 0 18px;
+        }
 
-.gender-title h2{
-    color:#2e6895;
-}
+        .gender-title h2 {
+            color: #2e6895;
+        }
 
-.gender-line{
-    flex:1;
-    height:1px;
-    background:#ddd;
-}
+        .gender-line {
+            flex: 1;
+            height: 1px;
+            background: #ddd;
+        }
 
 
-/* =====================================================
+        /* =====================================================
    PRODUCT LIST
 ===================================================== */
 
-.product-list{
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-}
+        .product-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
 
-.product-row{
-    background:white;
-    border:1px solid #eeeeee;
-    border-radius:17px;
-    min-height:120px;
-    display:flex;
-    align-items:center;
-    gap:20px;
-    padding:13px;
-    transition:.2s;
-}
+        .product-row {
+            background: white;
+            border: 1px solid #eeeeee;
+            border-radius: 17px;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 13px;
+            transition: .2s;
+        }
 
-.product-row:hover{
-    box-shadow:0 7px 20px rgba(0,0,0,.07);
-}
+        .product-row:hover {
+            box-shadow: 0 7px 20px rgba(0, 0, 0, .07);
+        }
 
-.product-photo{
-    width:105px;
-    height:95px;
-    background:#f7f2ef;
-    border-radius:13px;
-    overflow:hidden;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-shrink:0;
-}
+        .product-photo {
+            width: 105px;
+            height: 95px;
+            background: #f7f2ef;
+            border-radius: 13px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
 
-.product-photo img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
+        .product-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-.product-placeholder{
-    font-size:42px;
-}
+        .product-placeholder {
+            font-size: 42px;
+        }
 
-.product-detail{
-    flex:1;
-}
+        .product-detail {
+            flex: 1;
+        }
 
-.product-detail h3{
-    font-size:17px;
-    color:#444;
-    margin-bottom:8px;
-}
+        .product-detail h3 {
+            font-size: 17px;
+            color: #444;
+            margin-bottom: 8px;
+        }
 
-.product-detail p{
-    color:#999;
-    font-size:13px;
-    margin-bottom:6px;
-}
+        .product-detail p {
+            color: #999;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
 
-.product-price{
-    color:#3669a0;
-    font-size:17px;
-    font-weight:bold;
-}
+        .product-price {
+            color: #3669a0;
+            font-size: 17px;
+            font-weight: bold;
+        }
 
-.buy-button{
-    border:none;
-    background:#3077b5;
-    color:white;
-    padding:11px 25px;
-    border-radius:20px;
-}
+        .buy-button {
+            border: none;
+            background: #3077b5;
+            color: white;
+            padding: 11px 25px;
+            border-radius: 20px;
+        }
 
-.buy-button:hover{
-    background:#2f819c;
-}
+        .buy-button:hover {
+            background: #2f819c;
+        }
 
 
-/* =====================================================
+        /* =====================================================
    CART PAGE
 ===================================================== */
 
-.cart-page{
-    width:90%;
-    max-width:950px;
-    margin:30px auto 80px;
-}
+        .cart-page {
+            width: 90%;
+            max-width: 950px;
+            margin: 30px auto 80px;
+        }
 
-.cart-title{
-    text-align:center;
-    margin:25px 0 30px;
-}
+        .cart-title {
+            text-align: center;
+            margin: 25px 0 30px;
+        }
 
-.cart-title h1{
-    color:#3189bc;
-}
+        .cart-title h1 {
+            color: #3189bc;
+        }
 
-.cart-title p{
-    color:#999;
-    margin-top:7px;
-}
+        .cart-title p {
+            color: #999;
+            margin-top: 7px;
+        }
 
-.cart-items{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-}
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
 
-.cart-item{
-    background:white;
-    border:1px solid #eee;
-    border-radius:17px;
-    padding:13px;
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
+        .cart-item {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 17px;
+            padding: 13px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
 
-.cart-checkbox{
-    width:20px;
-    height:20px;
-    accent-color:#3a99ae;
-}
+        .cart-checkbox {
+            width: 20px;
+            height: 20px;
+            accent-color: #3a99ae;
+        }
 
-.cart-image{
-    width:80px;
-    height:80px;
-    border-radius:12px;
-    background:#f5f1ef;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-}
+        .cart-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            background: #f5f1ef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
 
-.cart-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
+        .cart-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-.cart-item-info{
-    flex:1;
-}
+        .cart-item-info {
+            flex: 1;
+        }
 
-.cart-item-info h3{
-    font-size:15px;
-    margin-bottom:7px;
-}
+        .cart-item-info h3 {
+            font-size: 15px;
+            margin-bottom: 7px;
+        }
 
-.cart-item-info p{
-    color:#5fa3e7;
-    font-weight:bold;
-}
+        .cart-item-info p {
+            color: #5fa3e7;
+            font-weight: bold;
+        }
 
-.quantity{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
+        .quantity {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-.quantity button{
-    width:28px;
-    height:28px;
-    border-radius:50%;
-    border:1px solid #ddd;
-    background:white;
-}
+        .quantity button {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            background: white;
+        }
 
 
-/* =====================================================
+        /* =====================================================
    CART SUMMARY
 ===================================================== */
 
-.cart-summary{
-    background:#dff0ed;
-    border-radius:20px;
-    margin-top:25px;
-    padding:25px;
-}
+        .cart-summary {
+            background: #dff0ed;
+            border-radius: 20px;
+            margin-top: 25px;
+            padding: 25px;
+        }
 
-.summary-row{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:10px;
-}
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
 
-.summary-total{
-    font-size:21px;
-    font-weight:bold;
-    color:#2074ad;
-    border-top:1px solid rgba(0,0,0,.1);
-    padding-top:15px;
-    margin-top:15px;
-}
+        .summary-total {
+            font-size: 21px;
+            font-weight: bold;
+            color: #2074ad;
+            border-top: 1px solid rgba(0, 0, 0, .1);
+            padding-top: 15px;
+            margin-top: 15px;
+        }
 
-.buy-now{
-    width:100%;
-    margin-top:18px;
-    padding:15px;
-    border:none;
-    border-radius:25px;
-    background:#f39a9a;
-    color:white;
-    font-weight:bold;
-    font-size:16px;
-}
+        .buy-now {
+            width: 100%;
+            margin-top: 18px;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            background: #f39a9a;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
 
-.buy-now:hover{
-    background:#e78282;
-}
+        .buy-now:hover {
+            background: #e78282;
+        }
 
 
-/* =====================================================
+        /* =====================================================
    EMPTY CART
 ===================================================== */
 
-.empty-cart{
-    text-align:center;
-    background:white;
-    border:1px dashed #ddd;
-    border-radius:20px;
-    padding:60px 20px;
-}
+        .empty-cart {
+            text-align: center;
+            background: white;
+            border: 1px dashed #ddd;
+            border-radius: 20px;
+            padding: 60px 20px;
+        }
 
-.empty-cart .emoji{
-    font-size:60px;
-    margin-bottom:15px;
-}
+        .empty-cart .emoji {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
 
 
-/* =====================================================
+        /* =====================================================
    STRUK PESANAN
 ===================================================== */
 
-.receipt-overlay{
+        .receipt-overlay {
 
-    position:fixed;
+            position: fixed;
 
-    inset:0;
+            inset: 0;
 
-    background:rgba(52,95,93,.45);
+            background: rgba(52, 95, 93, .45);
 
-    display:none;
+            display: none;
 
-    align-items:center;
+            align-items: center;
 
-    justify-content:center;
+            justify-content: center;
 
-    z-index:5000;
+            z-index: 5000;
 
-    padding:20px;
+            padding: 20px;
 
-    overflow-y:auto;
+            overflow-y: auto;
 
-}
+        }
 
-.receipt-overlay.show{
+        .receipt-overlay.show {
 
-    display:flex;
+            display: flex;
 
-}
+        }
 
-.receipt-box{
+        .receipt-box {
 
-    width:100%;
+            width: 100%;
 
-    max-width:500px;
+            max-width: 500px;
 
-    background:#fffaf7;
+            background: #fffaf7;
 
-    border-radius:25px;
+            border-radius: 25px;
 
-    padding:25px;
+            padding: 25px;
 
-    box-shadow:0 15px 50px rgba(0,0,0,.25);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, .25);
 
-    animation:receiptPop .35s ease;
+            animation: receiptPop .35s ease;
 
-}
+        }
 
-@keyframes receiptPop{
+        @keyframes receiptPop {
 
-    from{
+            from {
 
-        opacity:0;
+                opacity: 0;
 
-        transform:scale(.85) translateY(20px);
+                transform: scale(.85) translateY(20px);
 
-    }
+            }
 
-    to{
+            to {
 
-        opacity:1;
+                opacity: 1;
 
-        transform:scale(1) translateY(0);
+                transform: scale(1) translateY(0);
 
-    }
+            }
 
-}
+        }
 
-.receipt-header{
+        .receipt-header {
 
-    text-align:center;
+            text-align: center;
 
-    border-bottom:2px dashed #ccc;
+            border-bottom: 2px dashed #ccc;
 
-    padding-bottom:18px;
+            padding-bottom: 18px;
 
-    margin-bottom:18px;
+            margin-bottom: 18px;
 
-}
+        }
 
-.receipt-icon{
+        .receipt-icon {
 
-    font-size:45px;
+            font-size: 45px;
 
-    margin-bottom:8px;
+            margin-bottom: 8px;
 
-}
+        }
 
-.receipt-header h2{
+        .receipt-header h2 {
 
-    color:#345f5d;
+            color: #345f5d;
 
-    margin-bottom:5px;
+            margin-bottom: 5px;
 
-}
+        }
 
-.receipt-header p{
+        .receipt-header p {
 
-    color:#999;
+            color: #999;
 
-    font-size:13px;
+            font-size: 13px;
 
-    margin-top:4px;
+            margin-top: 4px;
 
-}
+        }
 
-.receipt-number{
+        .receipt-number {
 
-    background:#f5eeee;
+            background: #f5eeee;
 
-    padding:10px;
+            padding: 10px;
 
-    border-radius:10px;
+            border-radius: 10px;
 
-    text-align:center;
+            text-align: center;
 
-    font-size:13px;
+            font-size: 13px;
 
-    color:#666;
+            color: #666;
 
-    margin-bottom:18px;
+            margin-bottom: 18px;
 
-}
+        }
 
-.receipt-products{
+        .receipt-products {
 
-    display:flex;
+            display: flex;
 
-    flex-direction:column;
+            flex-direction: column;
 
-    gap:10px;
+            gap: 10px;
 
-}
+        }
 
-.receipt-product{
+        .receipt-product {
 
-    display:flex;
+            display: flex;
 
-    align-items:center;
+            align-items: center;
 
-    gap:12px;
+            gap: 12px;
 
-    padding:10px 0;
+            padding: 10px 0;
 
-    border-bottom:1px dotted #bbb;
+            border-bottom: 1px dotted #bbb;
 
-}
+        }
 
-.receipt-product-icon{
+        .receipt-product-icon {
 
-    width:45px;
+            width: 45px;
 
-    height:45px;
+            height: 45px;
 
-    border-radius:10px;
+            border-radius: 10px;
 
-    background:#f5dedb;
+            background: #f5dedb;
 
-    display:flex;
+            display: flex;
 
-    align-items:center;
+            align-items: center;
 
-    justify-content:center;
+            justify-content: center;
 
-    font-size:23px;
+            font-size: 23px;
 
-    flex-shrink:0;
+            flex-shrink: 0;
 
-}
+        }
 
-.receipt-product-info{
+        .receipt-product-info {
 
-    flex:1;
+            flex: 1;
 
-}
+        }
 
-.receipt-product-info h4{
+        .receipt-product-info h4 {
 
-    font-size:14px;
+            font-size: 14px;
 
-    color:#444;
+            color: #444;
 
-    margin-bottom:5px;
+            margin-bottom: 5px;
 
-}
+        }
 
-.receipt-product-info p{
+        .receipt-product-info p {
 
-    font-size:12px;
+            font-size: 12px;
 
-    color:#999;
+            color: #999;
 
-}
+        }
 
-.receipt-product-price{
+        .receipt-product-price {
 
-    font-weight:bold;
+            font-weight: bold;
 
-    color:#2c7996;
+            color: #2c7996;
 
-    font-size:14px;
+            font-size: 14px;
 
-}
+        }
 
-.receipt-summary{
+        .receipt-summary {
 
-    margin-top:18px;
+            margin-top: 18px;
 
-    border-top:2px dashed #ccc;
+            border-top: 2px dashed #ccc;
 
-    padding-top:15px;
+            padding-top: 15px;
 
-}
+        }
 
-.receipt-row{
+        .receipt-row {
 
-    display:flex;
+            display: flex;
 
-    justify-content:space-between;
+            justify-content: space-between;
 
-    padding:7px 0;
+            padding: 7px 0;
 
-    font-size:14px;
+            font-size: 14px;
 
-    color:#666;
+            color: #666;
 
-}
+        }
 
-.receipt-total{
+        .receipt-total {
 
-    border-top:1px solid #ddd;
+            border-top: 1px solid #ddd;
 
-    margin-top:8px;
+            margin-top: 8px;
 
-    padding-top:14px;
+            padding-top: 14px;
 
-    font-size:19px;
+            font-size: 19px;
 
-    font-weight:bold;
+            font-weight: bold;
 
-    color:#3a77ba;
+            color: #3a77ba;
 
-}
+        }
 
 
-/* =====================================================
+        /* =====================================================
    PESANAN SEGERA DIANTAR
    TIDAK ADA KOTAK TAMBAHAN
 ===================================================== */
 
-.delivery-box{
+        .delivery-box {
 
-    margin-top:22px;
+            margin-top: 22px;
 
-    padding-top:20px;
+            padding-top: 20px;
 
-    border-top:2px dashed #ccc;
+            border-top: 2px dashed #ccc;
 
-    text-align:center;
+            text-align: center;
 
-}
+        }
 
-.delivery-emoji{
+        .delivery-emoji {
 
-    font-size:45px;
+            font-size: 45px;
 
-    letter-spacing:5px;
+            letter-spacing: 5px;
 
-    margin-bottom:8px;
+            margin-bottom: 8px;
 
-}
+        }
 
-.delivery-box h3{
+        .delivery-box h3 {
 
-    color:#258685;
+            color: #258685;
 
-    font-size:20px;
+            font-size: 20px;
 
-    margin-bottom:8px;
+            margin-bottom: 8px;
 
-}
+        }
 
-.delivery-box p{
+        .delivery-box p {
 
-    color:#777;
+            color: #777;
 
-    font-size:13px;
+            font-size: 13px;
 
-    line-height:1.6;
+            line-height: 1.6;
 
-}
+        }
 
-.delivery-status{
+        .delivery-status {
 
-    margin-top:10px;
+            margin-top: 10px;
 
-    color:#4c8c8a;
+            color: #4c8c8a;
 
-    font-size:12px;
+            font-size: 12px;
 
-    font-weight:bold;
+            font-weight: bold;
 
-}
+        }
 
-.receipt-close{
+        .receipt-close {
 
-    width:100%;
+            width: 100%;
 
-    margin-top:18px;
+            margin-top: 18px;
 
-    padding:13px;
+            padding: 13px;
 
-    border:none;
+            border: none;
 
-    border-radius:25px;
+            border-radius: 25px;
 
-    background:#4c8c8a;
+            background: #4c8c8a;
 
-    color:white;
+            color: white;
 
-    font-weight:bold;
+            font-weight: bold;
 
-    font-size:15px;
+            font-size: 15px;
 
-}
+        }
 
-.receipt-close:hover{
+        .receipt-close:hover {
 
-    background:#376f6d;
+            background: #376f6d;
 
-}
+        }
 
 
-/* =====================================================
+        /* =====================================================
    RESPONSIVE
 ===================================================== */
 
 
 
-/* =====================================================
+        /* =====================================================
    NAVIGASI TAMBAHAN, AKUN, BAHASA
 ===================================================== */
 
-.nav-btn{
-    border:none;
-    background:none;
-    font-size:14px;
-    color:#555;
-    padding:8px 2px;
-}
+        .nav-btn {
+            border: none;
+            background: none;
+            font-size: 14px;
+            color: #555;
+            padding: 8px 2px;
+        }
 
-.nav-btn:hover,
-.home-btn:hover{
-    color:#418ca7;
-}
+        .nav-btn:hover,
+        .home-btn:hover {
+            color: #418ca7;
+        }
 
-.language-select{
-    border:1px solid #ddd;
-    background:white;
-    border-radius:18px;
-    padding:8px 10px;
-    color:#555;
-    cursor:pointer;
-    font-size:13px;
-}
+        .language-select {
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 18px;
+            padding: 8px 10px;
+            color: #555;
+            cursor: pointer;
+            font-size: 13px;
+        }
 
-.account-button{
-    border:1px solid #eee;
-    background:#f7eeee;
-    border-radius:20px;
-    padding:9px 13px;
-}
+        .account-button {
+            border: 1px solid #eee;
+            background: #f7eeee;
+            border-radius: 20px;
+            padding: 9px 13px;
+        }
 
-.info-page{
-    width:90%;
-    max-width:900px;
-    margin:35px auto 80px;
-}
+        .info-page {
+            width: 90%;
+            max-width: 900px;
+            margin: 35px auto 80px;
+        }
 
-.info-card{
-    background:white;
-    border:1px solid #eee;
-    border-radius:22px;
-    padding:30px;
-    margin-top:20px;
-    line-height:1.7;
-}
+        .info-card {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 22px;
+            padding: 30px;
+            margin-top: 20px;
+            line-height: 1.7;
+        }
 
-.info-card h2{
-    color:#3a81b8;
-    margin-bottom:12px;
-}
-
-
-.account-overlay,
-.payment-overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(52,95,93,.45);
-    display:none;
-    align-items:center;
-    justify-content:center;
-    z-index:5500;
-    padding:20px;
-}
-
-.account-overlay.show,
-.payment-overlay.show{
-    display:flex;
-}
-
-.account-box,
-.payment-box{
-    width:100%;
-    max-width:450px;
-    background:#fffaf7;
-    border-radius:25px;
-    padding:28px;
-    box-shadow:0 15px 50px rgba(0,0,0,.25);
-}
-
-.account-box h2,
-.payment-box h2{
-    color:#2ca5c6;
-    margin-bottom:8px;
-}
-
-.account-box p,
-.payment-box p{
-    color:#888;
-    font-size:13px;
-    margin-bottom:18px;
-}
-
-.form-group{
-    margin-bottom:13px;
-}
-
-.form-group label{
-    display:block;
-    font-size:13px;
-    font-weight:bold;
-    margin-bottom:6px;
-}
-
-.form-group input{
-    width:100%;
-    padding:12px 14px;
-    border:1px solid #ddd;
-    border-radius:12px;
-    outline:none;
-}
-
-.form-group input:focus{
-    border-color:#1b79b7;
-}
-
-.form-row{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-}
-
-.payment-method-text{
-    font-weight:bold;
-    color:#1a71a3;
-    margin-top:16px;
-}
-
-.account-actions{
-    display:flex;
-    gap:10px;
-    margin-top:18px;
-}
-
-.account-actions button{
-    flex:1;
-}
-
-.secondary-btn{
-    border:1px solid #ddd;
-    background:white;
-    color:#555;
-    padding:12px;
-    border-radius:22px;
-}
-
-.account-status{
-    background:#dff0ed;
-    border-radius:14px;
-    padding:12px;
-    margin-bottom:15px;
-    font-size:13px;
-    color:#2e90be;
-}
+        .info-card h2 {
+            color: #3a81b8;
+            margin-bottom: 12px;
+        }
 
 
-/* NOTIFIKASI AKUN LUCU */
-.cute-notification{
-    position:fixed;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-45%) scale(.9);
-    width:min(90%,380px);
-    background:#fffaf7;
-    border:2px solid #f5dedb;
-    border-radius:25px;
-    padding:28px 25px;
-    text-align:center;
-    box-shadow:0 18px 55px rgba(0,0,0,.22);
-    z-index:7000;
-    opacity:0;
-    visibility:hidden;
-    transition:.25s ease;
-}
+        .account-overlay,
+        .payment-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(52, 95, 93, .45);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 5500;
+            padding: 20px;
+        }
 
-.cute-notification.show{
-    opacity:1;
-    visibility:visible;
-    transform:translate(-50%,-50%) scale(1);
-}
+        .account-overlay.show,
+        .payment-overlay.show {
+            display: flex;
+        }
 
-.cute-notification-emoji{
-    font-size:55px;
-    margin-bottom:8px;
-}
+        .account-box,
+        .payment-box {
+            width: 100%;
+            max-width: 450px;
+            background: #fffaf7;
+            border-radius: 25px;
+            padding: 28px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, .25);
+        }
 
-.cute-notification h3{
-    color:#345f5d;
-    margin-bottom:8px;
-}
+        .account-box h2,
+        .payment-box h2 {
+            color: #2ca5c6;
+            margin-bottom: 8px;
+        }
 
-.cute-notification p{
-    color:#2b91d1;
-    font-size:14px;
-    line-height:1.5;
-    margin-bottom:18px;
-}
+        .account-box p,
+        .payment-box p {
+            color: #888;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
 
-.cute-notification button{
-    border:none;
-    background:#f39a9a;
-    color:white;
-    padding:11px 22px;
-    border-radius:22px;
-    font-weight:bold;
-}
+        .form-group {
+            margin-bottom: 13px;
+        }
 
-.cute-notification button:hover{
-    background:#e78282;
-}
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
 
-@media(max-width:1000px){
-    .header-right{
-        gap:10px;
-    }
-    .nav-btn{
-        font-size:12px;
-    }
-    .cart-button{
-        padding:9px 12px;
-    }
-}
+        .form-group input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            outline: none;
+        }
 
-@media(max-width:768px){
-    .header-right{
-        overflow-x:auto;
-        max-width:75vw;
-        padding:5px 0;
-    }
-    .nav-btn,
-    .home-btn,
-    .account-button,
-    .language-select{
-        flex-shrink:0;
-    }
-    .home-btn{
-        display:block;
-    }
-}
+        .form-group input:focus {
+            border-color: #1b79b7;
+        }
 
-@media(max-width:768px){
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
 
-    header{
-        padding:0 4%;
-    }
+        .payment-method-text {
+            font-weight: bold;
+            color: #1a71a3;
+            margin-top: 16px;
+        }
 
-    .logo{
-        font-size:23px;
-    }
+        .account-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 18px;
+        }
 
-    .home-btn{
-        display:none;
-    }
+        .account-actions button {
+            flex: 1;
+        }
 
-    .hero{
-        height:450px;
-    }
+        .secondary-btn {
+            border: 1px solid #ddd;
+            background: white;
+            color: #555;
+            padding: 12px;
+            border-radius: 22px;
+        }
 
-    .hero-slide{
-        flex-direction:column;
-        text-align:center;
-        justify-content:center;
-        gap:20px;
-    }
+        .account-status {
+            background: #dff0ed;
+            border-radius: 14px;
+            padding: 12px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #2e90be;
+        }
 
-    .hero-text h1{
-        font-size:30px;
-    }
 
-    .hero-picture{
-        width:190px;
-        height:140px;
-        font-size:60px;
-    }
+        /* NOTIFIKASI AKUN LUCU */
+        .cute-notification {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -45%) scale(.9);
+            width: min(90%, 380px);
+            background: #fffaf7;
+            border: 2px solid #f5dedb;
+            border-radius: 25px;
+            padding: 28px 25px;
+            text-align: center;
+            box-shadow: 0 18px 55px rgba(0, 0, 0, .22);
+            z-index: 7000;
+            opacity: 0;
+            visibility: hidden;
+            transition: .25s ease;
+        }
 
-    .categories{
-        justify-content:flex-start;
-    }
+        .cute-notification.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
 
-    .features{
-        grid-template-columns:repeat(2,1fr);
-    }
+        .cute-notification-emoji {
+            font-size: 55px;
+            margin-bottom: 8px;
+        }
 
-    .product-row{
-        gap:12px;
-    }
+        .cute-notification h3 {
+            color: #345f5d;
+            margin-bottom: 8px;
+        }
 
-    .product-photo{
-        width:80px;
-        height:80px;
-    }
+        .cute-notification p {
+            color: #2b91d1;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 18px;
+        }
 
-    .product-detail h3{
-        font-size:14px;
-    }
+        .cute-notification button {
+            border: none;
+            background: #f39a9a;
+            color: white;
+            padding: 11px 22px;
+            border-radius: 22px;
+            font-weight: bold;
+        }
 
-    .product-price{
-        font-size:15px;
-    }
+        .cute-notification button:hover {
+            background: #e78282;
+        }
 
-    .buy-button{
-        padding:9px 15px;
-        font-size:12px;
-    }
+        @media(max-width:1000px) {
+            .header-right {
+                gap: 10px;
+            }
 
-    .cart-item{
-        flex-wrap:wrap;
-    }
+            .nav-btn {
+                font-size: 12px;
+            }
 
-    .quantity{
-        margin-left:auto;
-    }
+            .cart-button {
+                padding: 9px 12px;
+            }
+        }
 
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
-    }
+        @media(max-width:768px) {
+            .header-right {
+                overflow-x: auto;
+                max-width: 75vw;
+                padding: 5px 0;
+            }
 
-}
+            .nav-btn,
+            .home-btn,
+            .account-button,
+            .language-select {
+                flex-shrink: 0;
+            }
 
-@media(max-width:480px){
+            .home-btn {
+                display: block;
+            }
+        }
 
-    .features{
-        grid-template-columns:1fr;
-    }
+        @media(max-width:768px) {
 
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
+            header {
+                padding: 0 4%;
+            }
 
-    .product-row{
-        min-height:105px;
-    }
+            .logo {
+                font-size: 23px;
+            }
 
-    .product-photo{
-        width:70px;
-        height:70px;
-    }
+            .home-btn {
+                display: none;
+            }
 
-    .buy-button{
-        padding:8px 12px;
-    }
+            .hero {
+                height: 450px;
+            }
 
-    .receipt-box{
-        padding:20px 15px;
-    }
+            .hero-slide {
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+                gap: 20px;
+            }
 
-}
+            .hero-text h1 {
+                font-size: 30px;
+            }
 
-</style>
+            .hero-picture {
+                width: 190px;
+                height: 140px;
+                font-size: 60px;
+            }
+
+            .categories {
+                justify-content: flex-start;
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .product-row {
+                gap: 12px;
+            }
+
+            .product-photo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .product-detail h3 {
+                font-size: 14px;
+            }
+
+            .product-price {
+                font-size: 15px;
+            }
+
+            .buy-button {
+                padding: 9px 15px;
+                font-size: 12px;
+            }
+
+            .cart-item {
+                flex-wrap: wrap;
+            }
+
+            .quantity {
+                margin-left: auto;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media(max-width:480px) {
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-row {
+                min-height: 105px;
+            }
+
+            .product-photo {
+                width: 70px;
+                height: 70px;
+            }
+
+            .buy-button {
+                padding: 8px 12px;
+            }
+
+            .receipt-box {
+                padding: 20px 15px;
+            }
+
+        }
+    </style>
 
 </head>
 
@@ -1387,1308 +1387,1251 @@ footer ul{
 <body>
 
 
-<!-- =====================================================
+    <!-- =====================================================
      HEADER
 ===================================================== -->
 
-<header>
+    <header>
 
-    <div
-        class="logo"
-        onclick="showHome()"
-        style="cursor:pointer"
-    >
+        <div class="logo" onclick="showHome()" style="cursor:pointer">
 
-        NIRWANA BABY<span>Shop</span>
+            NIRWANA BABY<span>Shop</span>
 
-    </div>
+        </div>
 
 
-    <div class="header-right">
+        <div class="header-right">
 
-        <button
-            class="home-btn"
-            onclick="showHome()"
-            data-i18n="home"
-        >
-            🏠 Beranda
-        </button>
-<button
-            class="nav-btn"
-            onclick="showHistory()"
-            data-i18n="history"
-        >
-            📖 Sejarah
-        </button>
-<button
-            class="nav-btn account-button"
-            onclick="showAccount()"
-            data-i18n="account"
-        >
-            👤 <span id="accountNavText">Akun</span>
-        </button>
+            <button class="home-btn" onclick="showHome()" data-i18n="home">
+                🏠 Beranda
+            </button>
+            <button class="nav-btn" onclick="showHistory()" data-i18n="history">
+                📖 Sejarah
+            </button>
+            <button class="nav-btn account-button" onclick="showAccount()" data-i18n="account">
+                👤 <span id="accountNavText">Akun</span>
+            </button>
 
-        <button
-            class="cart-button"
-            onclick="showCart()"
-        >
-            🛒 <span data-i18n="cart">Keranjang</span>
+            <button class="cart-button" onclick="showCart()">
+                🛒 <span data-i18n="cart">Keranjang</span>
 
-            <span
-                class="cart-number"
-                id="cartNumber"
-            >
-                0
-            </span>
-        </button>
+                <span class="cart-number" id="cartNumber">
+                    0
+                </span>
+            </button>
 
-        <select
-            id="languageSelect"
-            class="language-select"
-            onchange="setLanguage(this.value)"
-            aria-label="Language"
-        >
-            <option value="id">🇮🇩 ID</option>
-            <option value="en">🇬🇧 EN</option>
-        </select>
+            <select id="languageSelect" class="language-select" onchange="setLanguage(this.value)"
+                aria-label="Language">
+                <option value="id">🇮🇩 ID</option>
+                <option value="en">🇬🇧 EN</option>
+            </select>
 
-    </div>
+        </div>
 
-</header>
+    </header>
 
 
 
-<!-- =====================================================
+    <!-- =====================================================
      HOME
 ===================================================== -->
 
-<section
-    id="homeScreen"
-    class="screen active"
->
+    <section id="homeScreen" class="screen active">
 
-<div class="home-content">
+        <div class="home-content">
 
 
-    <!-- HERO -->
+            <!-- HERO -->
 
-    <div class="hero">
+            <div class="hero">
 
 
-        <div class="hero-slide active">
+                <div class="hero-slide active">
 
-            <div class="hero-text">
+                    <div class="hero-text">
 
-                <small>
-                    SELAMAT DATANG DI NIRWANA BABY SHOP
-                </small>
+                        <small>
+                            SELAMAT DATANG DI NIRWANA BABY SHOP
+                        </small>
 
-                <h1>
-                    Semua Kebutuhan<br>
-                    Si Kecil Ada Di Sini
-                </h1>
+                        <h1>
+                            Semua Kebutuhan<br>
+                            Si Kecil Ada Di Sini
+                        </h1>
 
-                <p>
-                    Temukan pakaian, mainan,
-                    dan perlengkapan bayi.
-                </p>
+                        <p>
+                            Temukan pakaian, mainan,
+                            dan perlengkapan bayi.
+                        </p>
 
-                <button
-                    class="primary-btn"
-                    onclick="scrollToCategory()"
-                >
-                    Lihat Kategori
-                </button>
+                        <button class="primary-btn" onclick="scrollToCategory()">
+                            Lihat Kategori
+                        </button>
+
+                    </div>
+
+
+                    <div class="hero-picture">
+                        👶
+                    </div>
+
+                </div>
+
+
+                <div class="hero-slide">
+
+                    <div class="hero-text">
+
+                        <small>
+                            PROMO NIRWANA BABY SHOP
+                        </small>
+
+                        <h1>
+                            Belanja Untuk<br>
+                            Si Kecil
+                        </h1>
+
+                        <p>
+                            Banyak produk lucu dan
+                            nyaman untuk buah hati.
+                        </p>
+
+                        <button class="primary-btn" onclick="scrollToCategory()">
+                            Belanja Sekarang
+                        </button>
+
+                    </div>
+
+
+                    <div class="hero-picture">
+                        🧸
+                    </div>
+
+                </div>
+
+
+                <div class="hero-slide">
+
+                    <div class="hero-text">
+
+                        <small>
+                            NIRWANA BABY SHOP
+                        </small>
+
+                        <h1>
+                            Nyaman Untuk<br>
+                            Si Kecil
+                        </h1>
+
+                        <p>
+                            Produk pilihan untuk
+                            menemani tumbuh kembang bayi.
+                        </p>
+
+                    </div>
+
+
+                    <div class="hero-picture">
+                        🛍️
+                    </div>
+
+                </div>
+
+
+                <div class="hero-dots">
+
+                    <div class="hero-dot active" onclick="changeHero(0)"></div>
+
+                    <div class="hero-dot" onclick="changeHero(1)"></div>
+
+                    <div class="hero-dot" onclick="changeHero(2)"></div>
+
+                </div>
 
             </div>
 
 
-            <div class="hero-picture">
-                👶
+
+            <!-- CATEGORY -->
+
+            <section class="category-section" id="categorySection">
+
+                <div class="section-title">
+
+                    <h2>
+                        Shop by Category
+                    </h2>
+
+                    <p>
+                        Pilih kategori kebutuhan si kecil
+                    </p>
+
+                </div>
+
+
+                <div class="categories">
+
+                    <button class="category-item" onclick="openCategory(0)">
+                        <div class="category-circle"><img src="images/baju.jpg"
+                                onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span
+                                class="category-emoji" style="display:none">👕</span></div>
+                        <div class="category-name">Baju Bayi</div>
+                    </button>
+
+                    <button class="category-item" onclick="openCategory(1)">
+                        <div class="category-circle"><img src="images/makan.jpeg"
+                                onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span
+                                class="category-emoji" style="display:none">🍼</span></div>
+                        <div class="category-name">Alat Makan</div>
+                    </button>
+
+                    <button class="category-item" onclick="openCategory(2)">
+                        <div class="category-circle"><img src="images/perawatan.jpeg"
+                                onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span
+                                class="category-emoji" style="display:none">🛁</span></div>
+                        <div class="category-name">Alat Mandi</div>
+                    </button>
+
+                    <button class="category-item" onclick="openCategory(3)">
+                        <div class="category-circle"><img src="images/kamar.jpeg"
+                                onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span
+                                class="category-emoji" style="display:none">🛏️</span></div>
+                        <div class="category-name">Tempat Tidur</div>
+                    </button>
+
+                    <button class="category-item" onclick="openCategory(4)">
+                        <div class="category-circle"><img src="images/perlengkapan.jpeg"
+                                onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span
+                                class="category-emoji" style="display:none">🧸</span></div>
+                        <div class="category-name">Perlengkapan Bayi</div>
+                    </button>
+
+                </div>
+
+
+                <!-- PROMO -->
+
+                <div class="promo">
+
+                    <h2 data-i18n="payLaterTitle">
+                        💳 Buy Now & Pay Later
+                    </h2>
+
+                    <p data-i18n="payLaterDesc">
+                        Pilih pembayaran yang tersedia:
+                    </p>
+
+                    <p class="payment-method-text" data-i18n="paymentMethods">🏦 Bank BRI &nbsp; • &nbsp; 💙 DANA &nbsp;
+                        • &nbsp; 🏦 BCA &nbsp; • &nbsp; 🕒 Pay Later</p>
+
+                </div>
+
+
+
+                <!-- FEATURES -->
+
+                <div class="features">
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            🚚
+                        </div>
+
+                        <h3>
+                            Pengiriman Cepat
+                        </h3>
+
+                        <p>
+                            Pesanan segera diproses..
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            🔒
+                        </div>
+
+                        <h3>
+                            Pembayaran Aman
+                        </h3>
+
+                        <p>
+                            Transaksi aman.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            💝
+                        </div>
+
+                        <h3>
+                            Produk Pilihan
+                        </h3>
+
+                        <p>
+                            Produk untuk si kecil.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            💬
+                        </div>
+
+                        <h3>
+                            Bantuan
+                        </h3>
+
+                        <p>
+                            Kami siap membantu.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+        </div>
+
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <div class="footer-grid">
+
+                <div>
+
+                    <h2>
+                        Nirwana Baby<span style="color:#f39a9a">
+                            Shop
+                        </span>
+                    </h2>
+
+                    <p>
+                        Toko online kebutuhan bayi
+                        untuk menemani tumbuh kembang
+                        si kecil.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Menu
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Beranda
+                        </li>
+
+                        <li>
+                            Kategori
+                        </li>
+
+                        <li>
+                            Keranjang
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Bantuan
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Cara Belanja
+                        </li>
+
+                        <li>
+                            Pembayaran
+                        </li>
+
+                        <li>
+                            Pengiriman
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Kontak
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            📱 0811-7294-004
+                        </li>
+
+                        <li>
+                            📧 @Babycarerawa2
+                        </li>
+
+                        <li>
+                            📍 JL.Raden Intan Pertigaan Rawa-Rawa, Kalianda, Lampung Selatan
+                        </li>
+
+                    </ul>
+
+                </div>
+
             </div>
 
-        </div>
 
+            <div class="copyright">
 
-        <div class="hero-slide">
-
-            <div class="hero-text">
-
-                <small>
-                    PROMO NIRWANA BABY SHOP
-                </small>
-
-                <h1>
-                    Belanja Untuk<br>
-                    Si Kecil
-                </h1>
-
-                <p>
-                    Banyak produk lucu dan
-                    nyaman untuk buah hati.
-                </p>
-
-                <button
-                    class="primary-btn"
-                    onclick="scrollToCategory()"
-                >
-                    Belanja Sekarang
-                </button>
+                © 2026 NIRWANA BABY SHOP
 
             </div>
 
+        </footer>
 
-            <div class="hero-picture">
-                🧸
-            </div>
+    </section>
 
-        </div>
 
 
-        <div class="hero-slide">
 
-            <div class="hero-text">
 
-                <small>
-                    NIRWANA BABY SHOP
-                </small>
-
-                <h1>
-                    Nyaman Untuk<br>
-                    Si Kecil
-                </h1>
-
-                <p>
-                    Produk pilihan untuk
-                    menemani tumbuh kembang bayi.
-                </p>
-
-            </div>
-
-
-            <div class="hero-picture">
-                🛍️
-            </div>
-
-        </div>
-
-
-        <div class="hero-dots">
-
-            <div
-                class="hero-dot active"
-                onclick="changeHero(0)"
-            ></div>
-
-            <div
-                class="hero-dot"
-                onclick="changeHero(1)"
-            ></div>
-
-            <div
-                class="hero-dot"
-                onclick="changeHero(2)"
-            ></div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- CATEGORY -->
-
-    <section
-        class="category-section"
-        id="categorySection"
-    >
-
-        <div class="section-title">
-
-            <h2>
-                Shop by Category
-            </h2>
-
-            <p>
-                Pilih kategori kebutuhan si kecil
-            </p>
-
-        </div>
-
-
-        <div class="categories">
-
-            <button class="category-item" onclick="openCategory(0)">
-                <div class="category-circle"><img src="images/kategori-baju.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="category-emoji" style="display:none">👕</span></div>
-                <div class="category-name">Baju Bayi</div>
-            </button>
-
-            <button class="category-item" onclick="openCategory(1)">
-                <div class="category-circle"><img src="images/kategori-makan.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="category-emoji" style="display:none">🍼</span></div>
-                <div class="category-name">Alat Makan</div>
-            </button>
-
-            <button class="category-item" onclick="openCategory(2)">
-                <div class="category-circle"><img src="images/kategori-perawatan.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="category-emoji" style="display:none">🛁</span></div>
-                <div class="category-name">Alat Mandi</div>
-            </button>
-
-            <button class="category-item" onclick="openCategory(3)">
-                <div class="category-circle"><img src="images/kategori-kamar.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="category-emoji" style="display:none">🛏️</span></div>
-                <div class="category-name">Tempat Tidur</div>
-            </button>
-
-            <button class="category-item" onclick="openCategory(4)">
-                <div class="category-circle"><img src="images/kategori-perlengkapan.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="category-emoji" style="display:none">🧸</span></div>
-                <div class="category-name">Perlengkapan Bayi</div>
-            </button>
-
-        </div>
-
-
-        <!-- PROMO -->
-
-    <div class="promo">
-
-        <h2 data-i18n="payLaterTitle">
-            💳 Buy Now & Pay Later
-        </h2>
-
-        <p data-i18n="payLaterDesc">
-            Pilih pembayaran yang tersedia:
-        </p>
-
-        <p class="payment-method-text" data-i18n="paymentMethods">🏦 Bank BRI &nbsp; • &nbsp; 💙 DANA &nbsp; • &nbsp; 🏦 BCA &nbsp; • &nbsp; 🕒 Pay Later</p>
-
-    </div>
-
-
-
-    <!-- FEATURES -->
-
-    <div class="features">
-
-        <div class="feature">
-
-            <div class="feature-icon">
-                🚚
-            </div>
-
-            <h3>
-                Pengiriman Cepat
-            </h3>
-
-            <p>
-                Pesanan segera diproses..
-            </p>
-
-        </div>
-
-
-        <div class="feature">
-
-            <div class="feature-icon">
-                🔒
-            </div>
-
-            <h3>
-                Pembayaran Aman
-            </h3>
-
-            <p>
-                Transaksi aman.
-            </p>
-
-        </div>
-
-
-        <div class="feature">
-
-            <div class="feature-icon">
-                💝
-            </div>
-
-            <h3>
-                Produk Pilihan
-            </h3>
-
-            <p>
-                Produk untuk si kecil.
-            </p>
-
-        </div>
-
-
-        <div class="feature">
-
-            <div class="feature-icon">
-                💬
-            </div>
-
-            <h3>
-                Bantuan
-            </h3>
-
-            <p>
-                Kami siap membantu.
-            </p>
-
-        </div>
-
-    </div>
-
-
-</div>
-
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <div class="footer-grid">
-
-        <div>
-
-            <h2>
-                Nirwana Baby<span style="color:#f39a9a">
-                    Shop
-                </span>
-            </h2>
-
-            <p>
-                Toko online kebutuhan bayi
-                untuk menemani tumbuh kembang
-                si kecil.
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <h3>
-                Menu
-            </h3>
-
-            <ul>
-
-                <li>
-                    Beranda
-                </li>
-
-                <li>
-                    Kategori
-                </li>
-
-                <li>
-                    Keranjang
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <div>
-
-            <h3>
-                Bantuan
-            </h3>
-
-            <ul>
-
-                <li>
-                    Cara Belanja
-                </li>
-
-                <li>
-                    Pembayaran
-                </li>
-
-                <li>
-                    Pengiriman
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <div>
-
-            <h3>
-                Kontak
-            </h3>
-
-            <ul>
-
-                <li>
-                    📱 0811-7294-004
-                </li>
-
-                <li>
-                    📧 @Babycarerawa2
-                </li>
-
-                <li>
-                    📍 JL.Raden Intan Pertigaan Rawa-Rawa, Kalianda, Lampung Selatan
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-
-    <div class="copyright">
-
-        © 2026 NIRWANA BABY SHOP
-
-    </div>
-
-</footer>
-
-</section>
-
-
-
-
-
-<!-- =====================================================
+    <!-- =====================================================
      SEJARAH SCREEN
 ===================================================== -->
-<section id="historyScreen" class="screen">
-    <div class="info-page">
-        <button class="back-button" onclick="showHome()" data-i18n="backHome">
-            ← Kembali ke Beranda
-        </button>
-        <div class="category-heading">
-            <h1 data-i18n="historyTitle">Sejarah Nirwana Baby Shop</h1>
-            <p data-i18n="historySubtitle">Mengenal perjalanan toko kami.</p>
+    <section id="historyScreen" class="screen">
+        <div class="info-page">
+            <button class="back-button" onclick="showHome()" data-i18n="backHome">
+                ← Kembali ke Beranda
+            </button>
+            <div class="category-heading">
+                <h1 data-i18n="historyTitle">Sejarah Nirwana Baby Shop</h1>
+                <p data-i18n="historySubtitle">Mengenal perjalanan toko kami.</p>
+            </div>
+            <div class="info-card">
+                <h2 data-i18n="historyHeading">Tentang Nirwana Baby Shop</h2>
+                <p data-i18n="historyText">
+                    Nirwana Baby Shop hadir sebagai toko online yang menyediakan berbagai kebutuhan bayi,
+                    mulai dari pakaian, Peralatan makan dan mandi, mainan, perawatan, perlengkapan, hingga aksesoris.
+                    Kami berusaha memberikan pilihan produk yang nyaman dan sesuai untuk kebutuhan si kecil.
+                </p>
+            </div>
         </div>
-        <div class="info-card">
-            <h2 data-i18n="historyHeading">Tentang Nirwana Baby Shop</h2>
-            <p data-i18n="historyText">
-                Nirwana Baby Shop hadir sebagai toko online yang menyediakan berbagai kebutuhan bayi,
-                mulai dari pakaian, Peralatan makan dan mandi, mainan, perawatan, perlengkapan, hingga aksesoris.
-                Kami berusaha memberikan pilihan produk yang nyaman dan sesuai untuk kebutuhan si kecil.
-            </p>
-        </div>
-    </div>
-</section>
+    </section>
 
 
-<!-- =====================================================
+    <!-- =====================================================
      CATEGORY SCREEN
 ===================================================== -->
 
-<section
-    id="categoryScreen"
-    class="screen"
->
+    <section id="categoryScreen" class="screen">
 
-    <div class="page-container">
+        <div class="page-container">
 
 
-        <button
-            class="back-button"
-            onclick="showHome()"
-        >
-            ← Kembali ke Beranda
-        </button>
+            <button class="back-button" onclick="showHome()">
+                ← Kembali ke Beranda
+            </button>
 
 
-        <div class="category-heading">
+            <div class="category-heading">
 
-            <h1 id="categoryPageTitle">
-                Baju Bayi
-            </h1>
+                <h1 id="categoryPageTitle">
+                    Baju Bayi
+                </h1>
 
-            <p id="categoryPageDescription">
-                Pilihan pakaian bayi yang nyaman
-                dan lucu.
-            </p>
+                <p id="categoryPageDescription">
+                    Pilihan pakaian bayi yang nyaman
+                    dan lucu.
+                </p>
+
+            </div>
+
+
+            <div id="categoryProducts"></div>
+
 
         </div>
 
-
-        <div id="categoryProducts"></div>
-
-
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- =====================================================
+    <!-- =====================================================
      CART SCREEN
 ===================================================== -->
 
-<section
-    id="cartScreen"
-    class="screen"
->
+    <section id="cartScreen" class="screen">
 
-    <div class="cart-page">
+        <div class="cart-page">
 
 
-        <button
-            class="back-button"
-            onclick="showHome()"
-        >
-            ← Kembali ke Beranda
-        </button>
+            <button class="back-button" onclick="showHome()">
+                ← Kembali ke Beranda
+            </button>
 
 
-        <div class="cart-title">
+            <div class="cart-title">
 
-            <h1>
-                🛒 Keranjang Belanja
-            </h1>
+                <h1>
+                    🛒 Keranjang Belanja
+                </h1>
 
-            <p>
-                Pilih barang yang ingin kamu pesan
-            </p>
+                <p>
+                    Pilih barang yang ingin kamu pesan
+                </p>
+
+            </div>
+
+
+            <div id="cartContent"></div>
+
 
         </div>
 
-
-        <div id="cartContent"></div>
-
-
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- =====================================================
+    <!-- =====================================================
      AKUN / BUAT AKUN
 ===================================================== -->
-<div class="account-overlay" id="accountOverlay">
-    <div class="account-box">
-        <h2>👤 <span data-i18n="accountTitle">Buat Akun</span></h2>
-        <p data-i18n="accountDesc">Isi 3 data saja untuk membuat akun Nirwana Baby Shop.</p>
-        <div id="accountStatus"></div>
+    <div class="account-overlay" id="accountOverlay">
+        <div class="account-box">
+            <h2>👤 <span data-i18n="accountTitle">Buat Akun</span></h2>
+            <p data-i18n="accountDesc">Isi 3 data saja untuk membuat akun Nirwana Baby Shop.</p>
+            <div id="accountStatus"></div>
 
-        <div class="form-group">
-            <label>Username</label>
-            <input id="accountUsername" type="text" placeholder="Masukkan username">
-        </div>
+            <div class="form-group">
+                <label>Username</label>
+                <input id="accountUsername" type="text" placeholder="Masukkan username">
+            </div>
 
-        <div class="form-group">
-            <label>Gmail</label>
-            <input id="accountEmail" type="email" placeholder="nama@gmail.com">
-        </div>
+            <div class="form-group">
+                <label>Gmail</label>
+                <input id="accountEmail" type="email" placeholder="nama@gmail.com">
+            </div>
 
-        <div class="form-group">
-            <label>Password</label>
-            <input id="accountPassword" type="password" placeholder="Masukkan password">
-        </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input id="accountPassword" type="password" placeholder="Masukkan password">
+            </div>
 
-        <div class="account-actions">
-            <button class="secondary-btn" onclick="closeAccount()">Batal</button>
-            <button class="primary-btn" onclick="saveAccount()">Buat Akun ✨</button>
+            <div class="account-actions">
+                <button class="secondary-btn" onclick="closeAccount()">Batal</button>
+                <button class="primary-btn" onclick="saveAccount()">Buat Akun ✨</button>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="cute-notification" id="cuteNotification">
-    <div class="cute-notification-emoji" id="cuteNotificationEmoji">🎉</div>
-    <h3 id="cuteNotificationTitle">Yay! Akun Berhasil Dibuat 💕</h3>
-    <p id="cuteNotificationText">Selamat datang di Nirwana Baby Shop! 🧸✨</p>
-    <button onclick="closeCuteNotification()">Oke, siap! 💗</button>
-</div>
+    <div class="cute-notification" id="cuteNotification">
+        <div class="cute-notification-emoji" id="cuteNotificationEmoji">🎉</div>
+        <h3 id="cuteNotificationTitle">Yay! Akun Berhasil Dibuat 💕</h3>
+        <p id="cuteNotificationText">Selamat datang di Nirwana Baby Shop! 🧸✨</p>
+        <button onclick="closeCuteNotification()">Oke, siap! 💗</button>
+    </div>
 
 
-<!-- =====================================================
+    <!-- =====================================================
      STRUK PESANAN
      SATU KOTAK SAJA
 ===================================================== -->
 
-<div
-    class="receipt-overlay"
-    id="receiptOverlay"
->
+    <div class="receipt-overlay" id="receiptOverlay">
 
-    <div class="receipt-box">
+        <div class="receipt-box">
 
 
-        <div class="receipt-header">
+            <div class="receipt-header">
 
-            <div class="receipt-icon">
-                🧾
-            </div>
+                <div class="receipt-icon">
+                    🧾
+                </div>
 
-            <h2>
-                STRUK PESANAN
-            </h2>
+                <h2>
+                    STRUK PESANAN
+                </h2>
 
-            <p>
-                NIRWANA BABY SHOP
-            </p>
+                <p>
+                    NIRWANA BABY SHOP
+                </p>
 
-            <p>
-                Terima kasih sudah berbelanja 💕
-            </p>
-
-        </div>
-
-
-
-        <div class="receipt-number">
-
-            No. Transaksi :
-            <strong id="receiptNumber"></strong>
-
-        </div>
-
-
-
-        <div
-            class="receipt-products"
-            id="receiptProducts"
-        ></div>
-
-
-
-        <div class="receipt-summary">
-
-
-            <div class="receipt-row">
-
-                <span>
-                    Total Barang
-                </span>
-
-                <strong id="receiptCount">
-                    0
-                </strong>
+                <p>
+                    Terima kasih sudah berbelanja 💕
+                </p>
 
             </div>
 
 
-            <div class="receipt-row">
 
-                <span>
-                    Subtotal
-                </span>
+            <div class="receipt-number">
 
-                <strong id="receiptSubtotal">
-                    Rp 0
-                </strong>
+                No. Transaksi :
+                <strong id="receiptNumber"></strong>
 
             </div>
 
 
-            <div class="receipt-row">
 
-                <span>
-                    Ongkos Kirim
-                </span>
+            <div class="receipt-products" id="receiptProducts"></div>
 
-                <strong>
-                    GRATIS
-                </strong>
+
+
+            <div class="receipt-summary">
+
+
+                <div class="receipt-row">
+
+                    <span>
+                        Total Barang
+                    </span>
+
+                    <strong id="receiptCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="receipt-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="receiptSubtotal">
+                        Rp 0
+                    </strong>
+
+                </div>
+
+
+                <div class="receipt-row">
+
+                    <span>
+                        Ongkos Kirim
+                    </span>
+
+                    <strong>
+                        GRATIS
+                    </strong>
+
+                </div>
+
+
+                <div class="receipt-row receipt-total">
+
+                    <span>
+                        TOTAL BAYAR
+                    </span>
+
+                    <strong id="receiptTotal">
+                        Rp 0
+                    </strong>
+
+                </div>
 
             </div>
 
 
-            <div class="receipt-row receipt-total">
 
-                <span>
-                    TOTAL BAYAR
-                </span>
-
-                <strong id="receiptTotal">
-                    Rp 0
-                </strong>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- PESANAN DIANTAR
+            <!-- PESANAN DIANTAR
              TIDAK ADA KOTAK LAGI -->
 
-        <div class="delivery-box">
+            <div class="delivery-box">
 
-            <div class="delivery-emoji">
-                📦 🚚 🏠
+                <div class="delivery-emoji">
+                    📦 🚚 🏠
+                </div>
+
+                <h3>
+                    Pesanan Segera Diantar!
+                </h3>
+
+                <p>
+
+                    Pesanan kamu sedang diproses
+                    dan akan segera dikirim.
+
+                    <br>
+
+                    Tunggu pesanan sampai ke rumah ya! 🥰
+
+                </p>
+
+                <div class="delivery-status">
+
+                    🚚 PESANAN SEDANG DIPROSES
+
+                </div>
+
             </div>
 
-            <h3>
-                Pesanan Segera Diantar!
-            </h3>
 
-            <p>
 
-                Pesanan kamu sedang diproses
-                dan akan segera dikirim.
+            <button class="receipt-close" onclick="finishOrder()">
 
-                <br>
+                Oke, Terima Kasih 💗
 
-                Tunggu pesanan sampai ke rumah ya! 🥰
+            </button>
 
-            </p>
-
-            <div class="delivery-status">
-
-                🚚 PESANAN SEDANG DIPROSES
-
-            </div>
 
         </div>
-
-
-
-        <button
-            class="receipt-close"
-            onclick="finishOrder()"
-        >
-
-            Oke, Terima Kasih 💗
-
-        </button>
-
 
     </div>
 
-</div>
 
 
+    <script>
+        let pendingBuyAfterAccount = null;
+        let pendingPurchasedIds = [];
 
-<script>
-let pendingBuyAfterAccount = null;
-let pendingPurchasedIds = [];
 
+        /* =====================================================
+           DATA PRODUK
+        ===================================================== */
 
-/* =====================================================
-   DATA PRODUK
-===================================================== */
+        const categories = [
 
-const categories = [
+            {
+                name: "Baju Bayi",
+                description: "Pakaian bayi laki-laki dan perempuan yang nyaman.",
+                type: "clothes",
+                boy: [
+                    { name: "Baju Baby shark", price: 79000, image: "images/shark.jpeg" },
+                    { name: "Baju Tuxedo", price: 89000, image: "images/suitagain.jpeg" },
+                    { name: "Baju Jumper bear", price: 99000, image: "images/suit.jpeg" },
+                    { name: "Baju Casual Bear", price: 85000, image: "images/babybwaeboy.jpeg" },
+                    { name: "Baju bayi car", price: 95000, image: "images/carboy.jpeg" }
+                ],
+                girl: [
+                    { name: "Baju Baby strawberry Girl", price: 89000, image: "images/pink.jpeg" },
+                    { name: "Baju Sanrio pink", price: 99000, image: "images/sanrio.jpeg" },
+                    { name: "Baju little Flower", price: 85000, image: "images/white.jpeg" },
+                    { name: "Baju Jumpsuit abu abu", price: 95000, image: "images/dress.jpeg" },
+                    { name: "Baju Casual pita", price: 109000, image: "images/simple.jpeg" }
+                ]
+            },
 
-    {
-        name:"Baju Bayi",
-        description:"Pakaian bayi laki-laki dan perempuan yang nyaman.",
-        type:"clothes",
-        boy:[
-            {name:"Baju Baby shark",price:79000,image:"images/shark.jpeg"},
-            {name:"Baju Tuxedo",price:89000,image:"images/suitagain.jpeg"},
-            {name:"Baju Jumper bear",price:99000,image:"images/suit.jpeg"},
-            {name:"Baju Casual Bear",price:85000,image:"images/babybwaeboy.jpeg"},
-            {name:"Baju bayi car",price:95000,image:"images/carboy.jpeg"}
-        ],
-        girl:[
-            {name:"Baju Baby strawberry Girl",price:89000,image:"images/pink.jpeg"},
-            {name:"Baju Sanrio pink",price:99000,image:"images/sanrio.jpeg"},
-            {name:"Baju little Flower",price:85000,image:"images/white.jpeg"},
-            {name:"Baju Jumpsuit abu abu",price:95000,image:"images/dress.jpeg"},
-            {name:"Baju Casual pita",price:109000,image:"images/simple.jpeg"}
-        ]
-    },
+            {
+                name: "Alat Makan",
+                description: "Perlengkapan makan dan minum untuk si kecil.",
+                products: [
+                    ["Botol Susu Baby", 89000, "images/botolsusu.jpeg"],
+                    ["Set Sendok Bayi", 69000, "images/semdok.jpeg"],
+                    ["Sikat Dot", 149000, "images/sikat.jpeg"],
+                    ["Pompa Asi", 59000, "images/pompapi.jpeg"],
+                    ["Baby Boosters set", 79000, "images/mejamk.jpeg"],
+                    ["Breastmilk Bag", 89000, "images/susubag.jpeg"],
+                    ["Kusukan", 49000, "images/kusukan.jpeg"],
+                    ["pacifier Baby", 129000, "images/empeng.jpeg"],
+                    ["Ice Gel Asi", 69000, "images/ice.jpeg"],
+                    ["Gigitan", 99000, "images/gigit2.jpeg"]
+                ]
+            },
 
-    {
-        name:"Alat Makan",
-        description:"Perlengkapan makan dan minum untuk si kecil.",
-        products:[
-            ["Botol Susu Baby",89000,"images/botolsusu.jpeg"],
-            ["Set Sendok Bayi",69000,"images/semdok.jpeg"],
-            ["Sikat Dot",149000,"images/sikat.jpeg"],
-            ["Pompa Asi",59000,"images/pompapi.jpeg"],
-            ["Baby Boosters set",79000,"images/mejamk.jpeg"],
-            ["Breastmilk Bag",89000,"images/susubag.jpeg"],
-            ["Kusukan",49000,"images/kusukan.jpeg"],
-            ["pacifier Baby",129000,"images/empeng.jpeg"],
-            ["Ice Gel Asi",69000,"images/ice.jpeg"],
-            ["Gigitan",99000,"images/gigit2.jpeg"]
-        ]
-    },
+            {
+                name: "Alat Mandi",
+                description: "Kebutuhan mandi dan perawatan bayi sehari-hari.",
+                products: [
+                    ["Bak mandi", 59000, "images/bak.jpeg"],
+                    ["Bath chair", 69000, "images/bath chair.jpeg"],
+                    ["Bedak", 49000, "images/bedakpro.jpeg"],
+                    ["Handuk", 59000, "images/handuk.jpeg"],
+                    ["Perlak", 49000, "images/perlak.jpeg"],
+                    ["Alat Mandi set", 69000, "images/mandiset.jpeg"],
+                    ["Popok bayi", 119000, "images/popok.jpeg"],
+                    ["Bando", 69000, "images/bando.jpeg"],
+                    ["Bedak 2", 49000, "images/bedak.jpeg"],
+                    ["Mainan", 149000, "images/mainan.jpeg"]
+                ]
+            },
 
-    {
-        name:"Alat Mandi",
-        description:"Kebutuhan mandi dan perawatan bayi sehari-hari.",
-        products:[
-            ["Bak mandi",59000,"images/bak.jpeg"],
-            ["Bath chair",69000,"images/bath chair.jpeg"],
-            ["Bedak",49000,"images/bedakpro.jpeg"],
-            ["Handuk",59000,"images/handuk.jpeg"],
-            ["Perlak",49000,"images/perlak.jpeg"],
-            ["Alat Mandi set",69000,"images/mandiset.jpeg"],
-            ["Popok bayi",119000,"images/popok.jpeg"],
-            ["Bando",69000,"images/bando.jpeg"],
-            ["Bedak 2",49000,"images/bedak.jpeg"],
-            ["Mainan",149000,"images/mainan.jpeg"]
-        ]
-    },
+            {
+                name: "Tempat Tidur",
+                description: "Kebutuhan nyaman untuk kamar dan tempat tidur bayi.",
+                products: [
+                    ["Kasur", 799000, "images/kasur.jpeg"],
+                    ["Sofa bayi", 149000, "images/sofabayi.jpeg"],
+                    ["Bantal", 129000, "images/bantal.jpeg"],
+                    ["Kelambu", 119000, "images/kelambu.jpeg"],
+                    ["Ayunan biru", 99000, "images/ayunanbiru.jpeg"],
+                    ["Gendongan depan", 89000, "images/gendongandepan.jpeg"],
+                    ["Gigitan bayi", 79000, "images/gigit.jpeg"],
+                    ["Bola", 109000, "images/bola.jpeg"],
+                    ["mainan pengantar tidur", 159000, "images/krincing.jpeg"],
+                    ["Baby toys bed", 139000, "images/piano.jpeg"]
+                ]
+            },
 
-    {
-        name:"Tempat Tidur",
-        description:"Kebutuhan nyaman untuk kamar dan tempat tidur bayi.",
-        products:[
-            ["Kasur",799000,"images/kasur.jpeg"],
-            ["Sofa bayi",149000,"images/sofabayi.jpeg"],
-            ["Bantal",129000,"images/bantal.jpeg"],
-            ["Kelambu",119000,"images/kelambu.jpeg"],
-            ["Ayunan biru",99000,"images/ayunanbiru.jpeg"],
-            ["Gendongan depan",89000,"images/gendongandepan.jpeg"],
-            ["Gigitan bayi",79000,"images/gigit.jpeg"],
-            ["Bola",109000,"images/bola.jpeg"],
-            ["mainan pengantar tidur",159000,"images/krincing.jpeg"],
-            ["Baby toys bed",139000,"images/piano.jpeg"]
-        ]
-    },
+            {
+                name: "Perlengkapan Bayi",
+                description: "Perlengkapan penting untuk kebutuhan si kecil.",
+                products: [
+                    ["Baby Walker", 149000, "images/walker.jpeg"],
+                    ["Tas", 129000, "images/tas.jpeg"],
+                    ["Topi", 99000, "images/topi.jpeg"],
+                    ["Baby Stroller", 1599000, "images/stroler.jpeg"],
+                    ["Baby Carrier", 499000, "images/ayunanbiru.jpeg"],
+                    ["Sepatu biru", 399000, "images/sepatu biruu.jpeg"],
+                    ["sepatu cowo", 149000, "images/cwoputihs.jpeg"],
+                    ["sarung tangan bayi", 199000, "images/sarungtangan.jpeg"],
+                    ["Kursi Ayunan", 109000, "images/kursiayunan.jpeg"],
+                    ["Kacamata", 169000, "images/kacamata.jpeg"],
+                ]
+            },
 
-    {
-        name:"Perlengkapan Bayi",
-        description:"Perlengkapan penting untuk kebutuhan si kecil.",
-        products:[
-            ["Baby Walker",149000,"images/walker.jpeg"],
-            ["Tas",129000,"images/tas.jpeg"],
-            ["Topi",99000,"images/topi.jpeg"],
-            ["Baby Stroller",1599000,"images/stroler.jpeg"],
-            ["Baby Carrier",499000,"images/ayunanbiru.jpeg"],
-            ["Sepatu biru",399000,"images/sepatu biruu.jpeg"],
-            ["sepatu cowo",149000,"images/cwoputihs.jpeg"],
-            ["sarung tangan bayi",199000,"images/sarungtangan.jpeg"],
-            ["Kursi Ayunan",109000,"images/kursiayunan.jpeg"],
-            ["Kacamata",169000,"images/kacamata.jpeg"],
-        ]
-    },
+        ];
 
-];
+        /* =====================================================
+           CART
+        ===================================================== */
 
-/* =====================================================
-   CART
-===================================================== */
-
-let cart = [];
-
+        let cart = [];
 
 
 
 
-/* =====================================================
-   AKUN & PEMBAYARAN
-===================================================== */
 
-let currentLanguage = "id";
-let pendingPurchase = false;
+        /* =====================================================
+           AKUN & PEMBAYARAN
+        ===================================================== */
 
-const translations = {
-    id:{
-        home:"🏠 Beranda",
-        category:"🏷️ Kategori",
-        history:"📖 Sejarah",
-        account:"👤 Akun",
-        cart:"Keranjang",
-        accessories:"Aksesoris",
-        payLaterTitle:"💳 Buy Now & Pay Later",
-        payLaterDesc:"Pilih pembayaran yang tersedia:",
-        historyTitle:"Sejarah Nirwana Baby Shop",
-        historySubtitle:"Mengenal perjalanan toko kami.",
-        historyHeading:"Tentang Nirwana Baby Shop",
-        historyText:"Nirwana Baby Shop hadir sebagai toko online yang menyediakan berbagai kebutuhan bayi, mulai dari pakaian, makanan dan feeding, mainan, perawatan, perlengkapan, hingga aksesoris. Kami berusaha memberikan pilihan produk yang nyaman dan sesuai untuk kebutuhan si kecil.",
-        backHome:"← Kembali ke Beranda",
-        accountTitle:"Buat Akun",
-        accountDesc:"Lengkapi data di bawah untuk membuat akun Nirwana Baby Shop.",
-        usernameLabel:"Username",
-        nameLabel:"Nama Lengkap",
-        emailLabel:"Email",
-        phoneLabel:"No. HP",
-        passwordLabel:"Password",
-        confirmPasswordLabel:"Konfirmasi Password",
-        addressLabel:"Alamat",
-        cityLabel:"Kota",
-        postalLabel:"Kode Pos",
-        cancel:"Batal",
-        saveAccount:"Buat Akun",
-        paymentMethods:"🏦 Bank BRI • 💙 DANA • 🏦 BCA • 🕒 Pay Later",
-        continue:"Lanjutkan",
-        buyNow:"BELI SEKARANG"
-    },
-    en:{
-        home:"🏠 Home",
-        category:"🏷️ Categories",
-        history:"📖 History",
-        account:"👤 Account",
-        cart:"Cart",
-        accessories:"Accessories",
-        payLaterTitle:"💳 Buy Now & Pay Later",
-        payLaterDesc:"Choose an available payment method:",
-        historyTitle:"Nirwana Baby Shop History",
-        historySubtitle:"Learn about our store journey.",
-        historyHeading:"About Nirwana Baby Shop",
-        historyText:"Nirwana Baby Shop is an online store providing baby needs, including clothing, food and feeding, toys, care products, equipment, and accessories. We aim to provide comfortable choices for little ones.",
-        backHome:"← Back to Home",
-        accountTitle:"Create Account",
-        accountDesc:"Complete the information below to create your Nirwana Baby Shop account.",
-        usernameLabel:"Username",
-        nameLabel:"Full Name",
-        emailLabel:"Email",
-        phoneLabel:"Phone",
-        passwordLabel:"Password",
-        confirmPasswordLabel:"Confirm Password",
-        addressLabel:"Address",
-        cityLabel:"City",
-        postalLabel:"Postal Code",
-        cancel:"Cancel",
-        saveAccount:"Create Account",
-        paymentMethods:"🏦 Bank BRI • 💙 DANA • 🏦 BCA • 🕒 Pay Later",
-        continue:"Continue",
-        buyNow:"BUY NOW"
-    }
-};
+        let currentLanguage = "id";
+        let pendingPurchase = false;
 
-function trCategoryName(category, lang=currentLanguage){
-    const names = {
-        "Baju Bayi": {id:"Baju Bayi",en:"Baby Clothing"},
-        "Alat Makan": {id:"Alat Makan",en:"Baby Feeding"},
-        "Mainan Bayi": {id:"Mainan Bayi",en:"Baby Toys"},
-        "Alat Mandi": {id:"Alat Mandi",en:"Baby Bath"},
-        "Perlengkapan Bayi": {id:"Perlengkapan Bayi",en:"Baby Essentials"},
-        "Aksesoris Bayi": {id:"Aksesoris Bayi",en:"Baby Accessories"},
-        "Popok & Diapers": {id:"Popok & Diapers",en:"Diapers & Nappies"},
-        "Kamar Bayi": {id:"Kamar Bayi",en:"Baby Room"}
-    };
-    return names[category.name]?.[lang] || category.name;
-}
-
-function trDescription(category, lang=currentLanguage){
-    const descriptions = {
-        "Baju Bayi": {
-            id:"Pakaian bayi laki-laki dan perempuan yang nyaman.",
-            en:"Comfortable clothing for baby boys and girls."
-        },
-        "Alat Makan": {
-            id:"Perlengkapan makan dan minum untuk si kecil.",
-            en:"Feeding and drinking essentials for your little one."
-        },
-        "Mainan Bayi": {
-            id:"Mainan lucu dan edukatif untuk menemani bermain.",
-            en:"Cute and educational toys for playtime."
-        },
-        "Alat Mandi": {
-            id:"Kebutuhan mandi dan perawatan bayi sehari-hari.",
-            en:"Everyday baby bath and care essentials."
-        },
-        "Perlengkapan Bayi": {
-            id:"Perlengkapan penting untuk kebutuhan si kecil.",
-            en:"Essential items for your little one."
-        },
-        "Aksesoris Bayi": {
-            id:"Aksesoris lucu untuk melengkapi kebutuhan si kecil.",
-            en:"Cute accessories for your little one."
-        },
-        "Popok & Diapers": {
-            id:"Kebutuhan popok dan perlengkapan kebersihan bayi.",
-            en:"Diapers and baby hygiene essentials."
-        },
-        "Tempat Tidur": {
-            id:"Kebutuhan nyaman untuk kamar dan tempat tidur bayi.",
-            en:"Comfortable essentials for baby's room and bed."
-        }
-    };
-    return descriptions[category.name]?.[lang] || category.description;
-}
-
-const productNameEN = {
-    "Botol Susu Baby":"Baby Milk Bottle",
-    "Set Sendok Bayi":"Baby Spoon Set",
-    "Baby Feeding Set":"Baby Feeding Set",
-    "Mangkok Baby":"Baby Bowl",
-    "Baby Cup":"Baby Cup",
-    "Piring Bayi":"Baby Plate",
-    "Bib Baby":"Baby Bib",
-    "Feeding Bottle":"Feeding Bottle",
-    "Snack Cup":"Snack Cup",
-    "Food Container":"Food Container",
-    "Boneka Bunny":"Bunny Doll",
-    "Soft Teddy Bear":"Soft Teddy Bear",
-    "Baby Rattle":"Baby Rattle",
-    "Stacking Ring":"Stacking Ring",
-    "Baby Musical Toy":"Baby Musical Toy",
-    "Puzzle Bayi":"Baby Puzzle",
-    "Mobil Mainan":"Toy Car",
-    "Educational Cube":"Educational Cube",
-    "Animal Soft Toy":"Animal Soft Toy",
-    "Baby Activity Toy":"Baby Activity Toy",
-    "Baby Shampoo":"Baby Shampoo",
-    "Baby Lotion":"Baby Lotion",
-    "Baby Powder":"Baby Powder",
-    "Baby Oil":"Baby Oil",
-    "Baby Hair Brush":"Baby Hair Brush",
-    "Baby Nail Care":"Baby Nail Care",
-    "Baby Bath Set":"Baby Bath Set",
-    "Baby Wipes":"Baby Wipes",
-    "Baby Toothbrush":"Baby Toothbrush",
-    "Baby Care Package":"Baby Care Package",
-    "Baby Blanket":"Baby Blanket",
-    "Baby Pillow":"Baby Pillow",
-    "Baby Towel":"Baby Towel",
-    "Baby Stroller":"Baby Stroller",
-    "Baby Carrier":"Baby Carrier",
-    "Baby Mattress":"Baby Mattress",
-    "Changing Mat":"Changing Mat",
-    "Baby Sleeping Bag":"Baby Sleeping Bag",
-    "Baby Storage Box":"Baby Storage Box",
-    "Baby Organizer":"Baby Organizer",
-    "Topi Bayi":"Baby Hat",
-    "Kaos Kaki Bayi":"Baby Socks",
-    "Bandana Bayi":"Baby Bandana",
-    "Sarung Tangan Bayi":"Baby Mittens",
-    "Jepit Rambut Bayi":"Baby Hair Clip",
-    "Gelang Bayi":"Baby Bracelet",
-    "Kalung Bayi":"Baby Necklace",
-    "Kacamata Bayi":"Baby Glasses",
-    "Tas Bayi Mini":"Mini Baby Bag",
-    "Gantungan Dot":"Pacifier Holder",
-    "Popok Newborn":"Newborn Diaper",
-    "Popok Bayi S":"Baby Diaper S",
-    "Popok Bayi M":"Baby Diaper M",
-    "Popok Bayi L":"Baby Diaper L",
-    "Popok Bayi XL":"Baby Diaper XL",
-    "Cloth Diaper":"Cloth Diaper",
-    "Changing Pad":"Changing Pad",
-    "Baby Diaper Bag":"Baby Diaper Bag",
-    "Diaper Cream":"Diaper Cream",
-    "Wet Tissue Baby":"Baby Wet Wipes",
-    "Baby Bed":"Baby Bed",
-    "Baby Mosquito Net":"Baby Mosquito Net",
-    "Baby Night Lamp":"Baby Night Lamp",
-    "Baby Cot Organizer":"Baby Cot Organizer",
-    "Bed Sheet Baby":"Baby Bed Sheet",
-    "Baby Bolster":"Baby Bolster",
-    "Baby Wall Decor":"Baby Wall Decor",
-    "Storage Basket":"Storage Basket",
-    "Baby Room Curtain":"Baby Room Curtain",
-    "Baby Room Mat":"Baby Room Mat"
-};
-
-function trProductName(name){
-    return currentLanguage==="en" ? (productNameEN[name] || name) : name;
-}
-
-function applyLanguageUI(){
-    const en = currentLanguage==="en";
-    const setText = (selector, text) => {
-        const el=document.querySelector(selector);
-        if(el) el.textContent=text;
-    };
-
-    setText(".hero-slide:nth-child(1) small", en ? "WELCOME TO NIRWANA BABY SHOP" : "SELAMAT DATANG DI NIRWANA BABY SHOP");
-    setText(".hero-slide:nth-child(1) h1", en ? "All Your Little One's Needs Are Here" : "Semua Kebutuhan Si Kecil Ada Di Sini");
-    setText(".hero-slide:nth-child(1) p", en ? "Find clothing, toys, and baby essentials." : "Temukan pakaian, mainan, dan perlengkapan bayi.");
-    setText(".hero-slide:nth-child(1) .primary-btn", en ? "View Categories" : "Lihat Kategori");
-
-    setText(".hero-slide:nth-child(2) small", en ? "NIRWANA BABY SHOP PROMO" : "PROMO NIRWANA BABY SHOP");
-    setText(".hero-slide:nth-child(2) h1", en ? "Shop For Your Little One" : "Belanja Untuk Si Kecil");
-    setText(".hero-slide:nth-child(2) p", en ? "Many cute and comfortable products for your little one." : "Banyak produk lucu dan nyaman untuk buah hati.");
-    setText(".hero-slide:nth-child(2) .primary-btn", en ? "Shop Now" : "Belanja Sekarang");
-
-    setText(".hero-slide:nth-child(3) small", "NIRWANA BABY SHOP");
-    setText(".hero-slide:nth-child(3) h1", en ? "Comfort For Your Little One" : "Nyaman Untuk Si Kecil");
-    setText(".hero-slide:nth-child(3) p", en ? "Selected products to accompany your baby's growth." : "Produk pilihan untuk menemani tumbuh kembang bayi.");
-
-    setText(".section-title h2", "Shop by Category");
-    setText(".section-title p", en ? "Choose a category for your little one" : "Pilih kategori kebutuhan si kecil");
-    setText(".promo p", en ? "Available payment methods:" : "Pembayaran yang tersedia:");
-    document.querySelectorAll(".categories .category-item").forEach((el,index)=>{
-        const names = en
-            ? ["Baby Clothing","Food & Feeding","Baby Toys","Baby Care","Baby Essentials","Baby Accessories","Diapers & Nappies","Baby Room"]
-            : ["Baju Bayi","Makanan & Feeding","Mainan Bayi","Perawatan Bayi","Perlengkapan Bayi","Aksesoris","Popok & Diapers","Kamar Bayi"];
-        const nameEl=el.querySelector(".category-name");
-        if(nameEl && index < names.length) nameEl.textContent=names[index];
-    });
-    const paymentText=document.querySelector(".payment-method-text");
-    if(paymentText) paymentText.textContent = en ? "🏦 Bank BRI • 💙 DANA • 🏦 BCA • 🕒 Pay Later" : "🏦 Bank BRI • 💙 DANA • 🏦 BCA • 🕒 Pay Later";
-
-    const labels = {
-        ".features .feature:nth-child(1) h3": en ? "Fast Delivery" : "Pengiriman Cepat",
-        ".features .feature:nth-child(1) p": en ? "Orders are processed quickly." : "Pesanan segera diproses.",
-        ".features .feature:nth-child(2) h3": en ? "Secure Payment" : "Pembayaran Aman",
-        ".features .feature:nth-child(2) p": en ? "Secure transactions." : "Transaksi aman.",
-        ".features .feature:nth-child(3) h3": en ? "Selected Products" : "Produk Pilihan",
-        ".features .feature:nth-child(3) p": en ? "Products for your little one." : "Produk untuk si kecil.",
-        ".features .feature:nth-child(4) h3": en ? "Help" : "Bantuan",
-        ".features .feature:nth-child(4) p": en ? "We are ready to help." : "Kami siap membantu."
-    };
-    Object.entries(labels).forEach(([sel,text])=>setText(sel,text));
-
-    document.querySelectorAll(".category-name").forEach(el=>{
-        const raw=el.textContent.trim();
-        const m={
-            "Baju Bayi":en?"Baby Clothing":"Baju Bayi",
-            "Alat Makan":en?"Baby Feeding":"Alat Makan",
-            "Mainan":en?"Toys":"Mainan",
-            "Alat Mandi":en?"Baby Bath":"Alat Mandi",
-            "Perlengkapan":en?"Essentials":"Perlengkapan",
-            "Aksesoris":en?"Accessories":"Aksesoris",
-            "Sejarah":en?"History":"Sejarah",
+        const translations = {
+            id: {
+                home: "🏠 Beranda",
+                category: "🏷️ Kategori",
+                history: "📖 Sejarah",
+                account: "👤 Akun",
+                cart: "Keranjang",
+                accessories: "Aksesoris",
+                payLaterTitle: "💳 Buy Now & Pay Later",
+                payLaterDesc: "Pilih pembayaran yang tersedia:",
+                historyTitle: "Sejarah Nirwana Baby Shop",
+                historySubtitle: "Mengenal perjalanan toko kami.",
+                historyHeading: "Tentang Nirwana Baby Shop",
+                historyText: "Nirwana Baby Shop hadir sebagai toko online yang menyediakan berbagai kebutuhan bayi, mulai dari pakaian, makanan dan feeding, mainan, perawatan, perlengkapan, hingga aksesoris. Kami berusaha memberikan pilihan produk yang nyaman dan sesuai untuk kebutuhan si kecil.",
+                backHome: "← Kembali ke Beranda",
+                accountTitle: "Buat Akun",
+                accountDesc: "Lengkapi data di bawah untuk membuat akun Nirwana Baby Shop.",
+                usernameLabel: "Username",
+                nameLabel: "Nama Lengkap",
+                emailLabel: "Email",
+                phoneLabel: "No. HP",
+                passwordLabel: "Password",
+                confirmPasswordLabel: "Konfirmasi Password",
+                addressLabel: "Alamat",
+                cityLabel: "Kota",
+                postalLabel: "Kode Pos",
+                cancel: "Batal",
+                saveAccount: "Buat Akun",
+                paymentMethods: "🏦 Bank BRI • 💙 DANA • 🏦 BCA • 🕒 Pay Later",
+                continue: "Lanjutkan",
+                buyNow: "BELI SEKARANG"
+            },
+            en: {
+                home: "🏠 Home",
+                category: "🏷️ Categories",
+                history: "📖 History",
+                account: "👤 Account",
+                cart: "Cart",
+                accessories: "Accessories",
+                payLaterTitle: "💳 Buy Now & Pay Later",
+                payLaterDesc: "Choose an available payment method:",
+                historyTitle: "Nirwana Baby Shop History",
+                historySubtitle: "Learn about our store journey.",
+                historyHeading: "About Nirwana Baby Shop",
+                historyText: "Nirwana Baby Shop is an online store providing baby needs, including clothing, food and feeding, toys, care products, equipment, and accessories. We aim to provide comfortable choices for little ones.",
+                backHome: "← Back to Home",
+                accountTitle: "Create Account",
+                accountDesc: "Complete the information below to create your Nirwana Baby Shop account.",
+                usernameLabel: "Username",
+                nameLabel: "Full Name",
+                emailLabel: "Email",
+                phoneLabel: "Phone",
+                passwordLabel: "Password",
+                confirmPasswordLabel: "Confirm Password",
+                addressLabel: "Address",
+                cityLabel: "City",
+                postalLabel: "Postal Code",
+                cancel: "Cancel",
+                saveAccount: "Create Account",
+                paymentMethods: "🏦 Bank BRI • 💙 DANA • 🏦 BCA • 🕒 Pay Later",
+                continue: "Continue",
+                buyNow: "BUY NOW"
+            }
         };
-        if(m[raw]) el.textContent=m[raw];
-    });
 
-    setText(".cart-title h1", en ? "🛒 Shopping Cart" : "🛒 Keranjang Belanja");
-    setText(".cart-title p", en ? "Choose the items you want to order" : "Pilih barang yang ingin kamu pesan");
-    setText(".summary-total span:first-child", en ? "Total" : "Total");
-    setText(".delivery-box h3", en ? "Your Order Is Being Delivered!" : "Pesanan Segera Diantar!");
-    setText(".delivery-box p", en ? "Your order is being processed and will be shipped soon.\nWait for your order to arrive at your home! 🥰" : "Pesanan kamu sedang diproses dan akan segera dikirim.\nTunggu pesanan sampai ke rumah ya! 🥰");
-    setText(".delivery-status", en ? "🚚 ORDER IS BEING PROCESSED" : "🚚 PESANAN SEDANG DIPROSES");
-    setText(".receipt-header h2", en ? "ORDER RECEIPT" : "STRUK PESANAN");
-    setText(".receipt-header p:nth-of-type(1)", "NIRWANA BABY SHOP");
-    setText(".receipt-header p:nth-of-type(2)", en ? "Thank you for shopping with us 💕" : "Terima kasih sudah berbelanja 💕");
-    const receiptNumberBox = document.querySelector(".receipt-number");
-    if(receiptNumberBox && receiptNumberBox.firstChild){
-        receiptNumberBox.firstChild.nodeValue = en ? "Transaction No. :" : "No. Transaksi :";
-    }
-    setText(".receipt-summary .receipt-row:nth-child(1) span", en ? "Total Items" : "Total Barang");
-    setText(".receipt-summary .receipt-row:nth-child(2) span", en ? "Subtotal" : "Subtotal");
-    setText(".receipt-summary .receipt-row:nth-child(3) span", en ? "Shipping" : "Ongkos Kirim");
-    setText(".receipt-summary .receipt-row:nth-child(3) strong", "FREE");
-    setText(".receipt-total span", en ? "TOTAL TO PAY" : "TOTAL BAYAR");
-    setText(".receipt-close", en ? "Okay, Thank You 💗" : "Oke, Terima Kasih 💗");
-
-    document.querySelectorAll(".product-detail p").forEach(el=>{
-        el.textContent = en ? "Nirwana Baby Shop selected product" : "Produk pilihan Nirwana Baby Shop";
-    });
-    document.querySelectorAll(".product-detail h3").forEach(el=>{
-        el.textContent=trProductName(el.textContent.trim());
-    });
-    document.querySelectorAll(".cart-item-info h3").forEach(el=>{
-        el.textContent=trProductName(el.textContent.trim());
-    });
-
-    const u=document.getElementById("accountUsername");
-    const e=document.getElementById("accountEmail");
-    if(u){u.placeholder=en?"Enter username":"Masukkan username";}
-    if(e){e.placeholder="nama@gmail.com";}
-
-    renderAccountStatus();
-}
-
-function setLanguage(lang){
-    currentLanguage = lang;
-    document.documentElement.lang = lang;
-    document.querySelectorAll("[data-i18n]").forEach(el=>{
-        const key = el.getAttribute("data-i18n");
-        if(translations[lang][key] !== undefined){
-            el.textContent = translations[lang][key];
+        function trCategoryName(category, lang = currentLanguage) {
+            const names = {
+                "Baju Bayi": { id: "Baju Bayi", en: "Baby Clothing" },
+                "Alat Makan": { id: "Alat Makan", en: "Baby Feeding" },
+                "Mainan Bayi": { id: "Mainan Bayi", en: "Baby Toys" },
+                "Alat Mandi": { id: "Alat Mandi", en: "Baby Bath" },
+                "Perlengkapan Bayi": { id: "Perlengkapan Bayi", en: "Baby Essentials" },
+                "Aksesoris Bayi": { id: "Aksesoris Bayi", en: "Baby Accessories" },
+                "Popok & Diapers": { id: "Popok & Diapers", en: "Diapers & Nappies" },
+                "Kamar Bayi": { id: "Kamar Bayi", en: "Baby Room" }
+            };
+            return names[category.name]?.[lang] || category.name;
         }
-    });
-    translateCommonText();
-    applyLanguageUI();
-}
 
-function translateCommonText(){
-    const en = currentLanguage === "en";
-    const map = en ? {
-        "Shop by Category":"Shop by Category",
-        "Pilih kategori kebutuhan si kecil":"Choose a category for your little one",
-        "Semua Kebutuhan":"All Your Little One's Needs",
-        "Si Kecil Ada Di Sini":"Are Right Here",
-        "Temukan pakaian, mainan,":"Find clothing, toys,",
-        "dan perlengkapan bayi.":"and baby essentials.",
-        "Lihat Kategori":"View Categories",
-        "Belanja Sekarang":"Shop Now",
-        "Keranjang masih kosong":"Your cart is empty",
-        "Yuk pilih barang lucu":"Choose cute items",
-        "untuk si kecil!":"for your little one!",
-        "Pilih barang yang mau dipesan ya 🥺":"Please choose the items you want to order 🥺"
-    } : {
-        "Shop by Category":"Shop by Category",
-        "Pilih kategori kebutuhan si kecil":"Pilih kategori kebutuhan si kecil",
-        "Lihat Kategori":"Lihat Kategori",
-        "Belanja Sekarang":"Belanja Sekarang",
-        "Keranjang masih kosong":"Keranjang masih kosong",
-        "Yuk pilih barang lucu":"Yuk pilih barang lucu",
-        "untuk si kecil!":"untuk si kecil!"
-    };
-
-    document.querySelectorAll("body *").forEach(el=>{
-        if(el.children.length===0){
-            const t=el.textContent.trim();
-            if(map[t] && map[t]!==t) el.textContent=map[t];
+        function trDescription(category, lang = currentLanguage) {
+            const descriptions = {
+                "Baju Bayi": {
+                    id: "Pakaian bayi laki-laki dan perempuan yang nyaman.",
+                    en: "Comfortable clothing for baby boys and girls."
+                },
+                "Alat Makan": {
+                    id: "Perlengkapan makan dan minum untuk si kecil.",
+                    en: "Feeding and drinking essentials for your little one."
+                },
+                "Mainan Bayi": {
+                    id: "Mainan lucu dan edukatif untuk menemani bermain.",
+                    en: "Cute and educational toys for playtime."
+                },
+                "Alat Mandi": {
+                    id: "Kebutuhan mandi dan perawatan bayi sehari-hari.",
+                    en: "Everyday baby bath and care essentials."
+                },
+                "Perlengkapan Bayi": {
+                    id: "Perlengkapan penting untuk kebutuhan si kecil.",
+                    en: "Essential items for your little one."
+                },
+                "Aksesoris Bayi": {
+                    id: "Aksesoris lucu untuk melengkapi kebutuhan si kecil.",
+                    en: "Cute accessories for your little one."
+                },
+                "Popok & Diapers": {
+                    id: "Kebutuhan popok dan perlengkapan kebersihan bayi.",
+                    en: "Diapers and baby hygiene essentials."
+                },
+                "Tempat Tidur": {
+                    id: "Kebutuhan nyaman untuk kamar dan tempat tidur bayi.",
+                    en: "Comfortable essentials for baby's room and bed."
+                }
+            };
+            return descriptions[category.name]?.[lang] || category.description;
         }
-    });
-}
 
-function getAccount(){
-    try{
-        return JSON.parse(localStorage.getItem("nirwanaAccount")) || null;
-    }catch(e){
-        return null;
-    }
-}
+        const productNameEN = {
+            "Botol Susu Baby": "Baby Milk Bottle",
+            "Set Sendok Bayi": "Baby Spoon Set",
+            "Baby Feeding Set": "Baby Feeding Set",
+            "Mangkok Baby": "Baby Bowl",
+            "Baby Cup": "Baby Cup",
+            "Piring Bayi": "Baby Plate",
+            "Bib Baby": "Baby Bib",
+            "Feeding Bottle": "Feeding Bottle",
+            "Snack Cup": "Snack Cup",
+            "Food Container": "Food Container",
+            "Boneka Bunny": "Bunny Doll",
+            "Soft Teddy Bear": "Soft Teddy Bear",
+            "Baby Rattle": "Baby Rattle",
+            "Stacking Ring": "Stacking Ring",
+            "Baby Musical Toy": "Baby Musical Toy",
+            "Puzzle Bayi": "Baby Puzzle",
+            "Mobil Mainan": "Toy Car",
+            "Educational Cube": "Educational Cube",
+            "Animal Soft Toy": "Animal Soft Toy",
+            "Baby Activity Toy": "Baby Activity Toy",
+            "Baby Shampoo": "Baby Shampoo",
+            "Baby Lotion": "Baby Lotion",
+            "Baby Powder": "Baby Powder",
+            "Baby Oil": "Baby Oil",
+            "Baby Hair Brush": "Baby Hair Brush",
+            "Baby Nail Care": "Baby Nail Care",
+            "Baby Bath Set": "Baby Bath Set",
+            "Baby Wipes": "Baby Wipes",
+            "Baby Toothbrush": "Baby Toothbrush",
+            "Baby Care Package": "Baby Care Package",
+            "Baby Blanket": "Baby Blanket",
+            "Baby Pillow": "Baby Pillow",
+            "Baby Towel": "Baby Towel",
+            "Baby Stroller": "Baby Stroller",
+            "Baby Carrier": "Baby Carrier",
+            "Baby Mattress": "Baby Mattress",
+            "Changing Mat": "Changing Mat",
+            "Baby Sleeping Bag": "Baby Sleeping Bag",
+            "Baby Storage Box": "Baby Storage Box",
+            "Baby Organizer": "Baby Organizer",
+            "Topi Bayi": "Baby Hat",
+            "Kaos Kaki Bayi": "Baby Socks",
+            "Bandana Bayi": "Baby Bandana",
+            "Sarung Tangan Bayi": "Baby Mittens",
+            "Jepit Rambut Bayi": "Baby Hair Clip",
+            "Gelang Bayi": "Baby Bracelet",
+            "Kalung Bayi": "Baby Necklace",
+            "Kacamata Bayi": "Baby Glasses",
+            "Tas Bayi Mini": "Mini Baby Bag",
+            "Gantungan Dot": "Pacifier Holder",
+            "Popok Newborn": "Newborn Diaper",
+            "Popok Bayi S": "Baby Diaper S",
+            "Popok Bayi M": "Baby Diaper M",
+            "Popok Bayi L": "Baby Diaper L",
+            "Popok Bayi XL": "Baby Diaper XL",
+            "Cloth Diaper": "Cloth Diaper",
+            "Changing Pad": "Changing Pad",
+            "Baby Diaper Bag": "Baby Diaper Bag",
+            "Diaper Cream": "Diaper Cream",
+            "Wet Tissue Baby": "Baby Wet Wipes",
+            "Baby Bed": "Baby Bed",
+            "Baby Mosquito Net": "Baby Mosquito Net",
+            "Baby Night Lamp": "Baby Night Lamp",
+            "Baby Cot Organizer": "Baby Cot Organizer",
+            "Bed Sheet Baby": "Baby Bed Sheet",
+            "Baby Bolster": "Baby Bolster",
+            "Baby Wall Decor": "Baby Wall Decor",
+            "Storage Basket": "Storage Basket",
+            "Baby Room Curtain": "Baby Room Curtain",
+            "Baby Room Mat": "Baby Room Mat"
+        };
 
-function showAccount(){
-    const account = getAccount();
-    document.getElementById("accountUsername").value = account?.username || "";
-    document.getElementById("accountEmail").value = account?.email || "";
-    document.getElementById("accountPassword").value = "";
-    renderAccountStatus();
-    document.getElementById("accountOverlay").classList.add("show");
-}
+        function trProductName(name) {
+            return currentLanguage === "en" ? (productNameEN[name] || name) : name;
+        }
 
-function closeAccount(){
-    document.getElementById("accountOverlay").classList.remove("show");
-}
+        function applyLanguageUI() {
+            const en = currentLanguage === "en";
+            const setText = (selector, text) => {
+                const el = document.querySelector(selector);
+                if (el) el.textContent = text;
+            };
 
-function renderAccountStatus(){
-    const account = getAccount();
-    const box = document.getElementById("accountStatus");
-    if(account){
-        box.className = "account-status";
-        box.textContent = currentLanguage==="en"
-            ? "Welcome back, " + account.username + "! ✨"
-            : "Hai lagi, " + account.username + "! ✨ Akunmu sudah terdaftar.";
-    }else{
-        box.className = "";
-        box.textContent = "";
-    }
-}
+            setText(".hero-slide:nth-child(1) small", en ? "WELCOME TO NIRWANA BABY SHOP" : "SELAMAT DATANG DI NIRWANA BABY SHOP");
+            setText(".hero-slide:nth-child(1) h1", en ? "All Your Little One's Needs Are Here" : "Semua Kebutuhan Si Kecil Ada Di Sini");
+            setText(".hero-slide:nth-child(1) p", en ? "Find clothing, toys, and baby essentials." : "Temukan pakaian, mainan, dan perlengkapan bayi.");
+            setText(".hero-slide:nth-child(1) .primary-btn", en ? "View Categories" : "Lihat Kategori");
 
-function showCuteNotification(username){
-    document.getElementById("cuteNotificationTitle").textContent = "Yay! Akun Berhasil Dibuat 💕";
-    document.getElementById("cuteNotificationText").textContent =
-        "Selamat datang, " + username + "! 🧸✨ Sekarang kamu sudah jadi bagian dari Nirwana Baby Shop.";
-    document.getElementById("cuteNotification").classList.add("show");
-}
+            setText(".hero-slide:nth-child(2) small", en ? "NIRWANA BABY SHOP PROMO" : "PROMO NIRWANA BABY SHOP");
+            setText(".hero-slide:nth-child(2) h1", en ? "Shop For Your Little One" : "Belanja Untuk Si Kecil");
+            setText(".hero-slide:nth-child(2) p", en ? "Many cute and comfortable products for your little one." : "Banyak produk lucu dan nyaman untuk buah hati.");
+            setText(".hero-slide:nth-child(2) .primary-btn", en ? "Shop Now" : "Belanja Sekarang");
 
-function closeCuteNotification(){
-    document.getElementById("cuteNotification").classList.remove("show");
-}
+            setText(".hero-slide:nth-child(3) small", "NIRWANA BABY SHOP");
+            setText(".hero-slide:nth-child(3) h1", en ? "Comfort For Your Little One" : "Nyaman Untuk Si Kecil");
+            setText(".hero-slide:nth-child(3) p", en ? "Selected products to accompany your baby's growth." : "Produk pilihan untuk menemani tumbuh kembang bayi.");
 
-function getAccount(){
-    try { return JSON.parse(localStorage.getItem('nirwanaAccount') || 'null'); }
-    catch(e){ return null; }
-}
+            setText(".section-title h2", "Shop by Category");
+            setText(".section-title p", en ? "Choose a category for your little one" : "Pilih kategori kebutuhan si kecil");
+            setText(".promo p", en ? "Available payment methods:" : "Pembayaran yang tersedia:");
+            document.querySelectorAll(".categories .category-item").forEach((el, index) => {
+                const names = en
+                    ? ["Baby Clothing", "Food & Feeding", "Baby Toys", "Baby Care", "Baby Essentials", "Baby Accessories", "Diapers & Nappies", "Baby Room"]
+                    : ["Baju Bayi", "Makanan & Feeding", "Mainan Bayi", "Perawatan Bayi", "Perlengkapan Bayi", "Aksesoris", "Popok & Diapers", "Kamar Bayi"];
+                const nameEl = el.querySelector(".category-name");
+                if (nameEl && index < names.length) nameEl.textContent = names[index];
+            });
+            const paymentText = document.querySelector(".payment-method-text");
+            if (paymentText) paymentText.textContent = en ? "🏦 Bank BRI • 💙 DANA • 🏦 BCA • 🕒 Pay Later" : "🏦 Bank BRI • 💙 DANA • 🏦 BCA • 🕒 Pay Later";
 
-function updateAccountNav(){
-    const account = getAccount();
-    const nav = document.getElementById('accountNavText');
-    if(nav){
-        nav.textContent = account ? account.username : 'Akun';
-    }
-}
+            const labels = {
+                ".features .feature:nth-child(1) h3": en ? "Fast Delivery" : "Pengiriman Cepat",
+                ".features .feature:nth-child(1) p": en ? "Orders are processed quickly." : "Pesanan segera diproses.",
+                ".features .feature:nth-child(2) h3": en ? "Secure Payment" : "Pembayaran Aman",
+                ".features .feature:nth-child(2) p": en ? "Secure transactions." : "Transaksi aman.",
+                ".features .feature:nth-child(3) h3": en ? "Selected Products" : "Produk Pilihan",
+                ".features .feature:nth-child(3) p": en ? "Products for your little one." : "Produk untuk si kecil.",
+                ".features .feature:nth-child(4) h3": en ? "Help" : "Bantuan",
+                ".features .feature:nth-child(4) p": en ? "We are ready to help." : "Kami siap membantu."
+            };
+            Object.entries(labels).forEach(([sel, text]) => setText(sel, text));
 
-function openAccountModal(){
-    const modal = document.getElementById('accountModal');
-    if(!modal) return;
-    const account = getAccount();
-    const title = modal.querySelector('h2');
-    const form = document.getElementById('accountForm');
+            document.querySelectorAll(".category-name").forEach(el => {
+                const raw = el.textContent.trim();
+                const m = {
+                    "Baju Bayi": en ? "Baby Clothing" : "Baju Bayi",
+                    "Alat Makan": en ? "Baby Feeding" : "Alat Makan",
+                    "Mainan": en ? "Toys" : "Mainan",
+                    "Alat Mandi": en ? "Baby Bath" : "Alat Mandi",
+                    "Perlengkapan": en ? "Essentials" : "Perlengkapan",
+                    "Aksesoris": en ? "Accessories" : "Aksesoris",
+                    "Sejarah": en ? "History" : "Sejarah",
+                };
+                if (m[raw]) el.textContent = m[raw];
+            });
 
-    if(account){
-        if(title) title.textContent = 'Akun Saya';
-        if(form){
-            form.innerHTML = `
+            setText(".cart-title h1", en ? "🛒 Shopping Cart" : "🛒 Keranjang Belanja");
+            setText(".cart-title p", en ? "Choose the items you want to order" : "Pilih barang yang ingin kamu pesan");
+            setText(".summary-total span:first-child", en ? "Total" : "Total");
+            setText(".delivery-box h3", en ? "Your Order Is Being Delivered!" : "Pesanan Segera Diantar!");
+            setText(".delivery-box p", en ? "Your order is being processed and will be shipped soon.\nWait for your order to arrive at your home! 🥰" : "Pesanan kamu sedang diproses dan akan segera dikirim.\nTunggu pesanan sampai ke rumah ya! 🥰");
+            setText(".delivery-status", en ? "🚚 ORDER IS BEING PROCESSED" : "🚚 PESANAN SEDANG DIPROSES");
+            setText(".receipt-header h2", en ? "ORDER RECEIPT" : "STRUK PESANAN");
+            setText(".receipt-header p:nth-of-type(1)", "NIRWANA BABY SHOP");
+            setText(".receipt-header p:nth-of-type(2)", en ? "Thank you for shopping with us 💕" : "Terima kasih sudah berbelanja 💕");
+            const receiptNumberBox = document.querySelector(".receipt-number");
+            if (receiptNumberBox && receiptNumberBox.firstChild) {
+                receiptNumberBox.firstChild.nodeValue = en ? "Transaction No. :" : "No. Transaksi :";
+            }
+            setText(".receipt-summary .receipt-row:nth-child(1) span", en ? "Total Items" : "Total Barang");
+            setText(".receipt-summary .receipt-row:nth-child(2) span", en ? "Subtotal" : "Subtotal");
+            setText(".receipt-summary .receipt-row:nth-child(3) span", en ? "Shipping" : "Ongkos Kirim");
+            setText(".receipt-summary .receipt-row:nth-child(3) strong", "FREE");
+            setText(".receipt-total span", en ? "TOTAL TO PAY" : "TOTAL BAYAR");
+            setText(".receipt-close", en ? "Okay, Thank You 💗" : "Oke, Terima Kasih 💗");
+
+            document.querySelectorAll(".product-detail p").forEach(el => {
+                el.textContent = en ? "Nirwana Baby Shop selected product" : "Produk pilihan Nirwana Baby Shop";
+            });
+            document.querySelectorAll(".product-detail h3").forEach(el => {
+                el.textContent = trProductName(el.textContent.trim());
+            });
+            document.querySelectorAll(".cart-item-info h3").forEach(el => {
+                el.textContent = trProductName(el.textContent.trim());
+            });
+
+            const u = document.getElementById("accountUsername");
+            const e = document.getElementById("accountEmail");
+            if (u) { u.placeholder = en ? "Enter username" : "Masukkan username"; }
+            if (e) { e.placeholder = "nama@gmail.com"; }
+
+            renderAccountStatus();
+        }
+
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            document.documentElement.lang = lang;
+            document.querySelectorAll("[data-i18n]").forEach(el => {
+                const key = el.getAttribute("data-i18n");
+                if (translations[lang][key] !== undefined) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            translateCommonText();
+            applyLanguageUI();
+        }
+
+        function translateCommonText() {
+            const en = currentLanguage === "en";
+            const map = en ? {
+                "Shop by Category": "Shop by Category",
+                "Pilih kategori kebutuhan si kecil": "Choose a category for your little one",
+                "Semua Kebutuhan": "All Your Little One's Needs",
+                "Si Kecil Ada Di Sini": "Are Right Here",
+                "Temukan pakaian, mainan,": "Find clothing, toys,",
+                "dan perlengkapan bayi.": "and baby essentials.",
+                "Lihat Kategori": "View Categories",
+                "Belanja Sekarang": "Shop Now",
+                "Keranjang masih kosong": "Your cart is empty",
+                "Yuk pilih barang lucu": "Choose cute items",
+                "untuk si kecil!": "for your little one!",
+                "Pilih barang yang mau dipesan ya 🥺": "Please choose the items you want to order 🥺"
+            } : {
+                "Shop by Category": "Shop by Category",
+                "Pilih kategori kebutuhan si kecil": "Pilih kategori kebutuhan si kecil",
+                "Lihat Kategori": "Lihat Kategori",
+                "Belanja Sekarang": "Belanja Sekarang",
+                "Keranjang masih kosong": "Keranjang masih kosong",
+                "Yuk pilih barang lucu": "Yuk pilih barang lucu",
+                "untuk si kecil!": "untuk si kecil!"
+            };
+
+            document.querySelectorAll("body *").forEach(el => {
+                if (el.children.length === 0) {
+                    const t = el.textContent.trim();
+                    if (map[t] && map[t] !== t) el.textContent = map[t];
+                }
+            });
+        }
+
+        function getAccount() {
+            try {
+                return JSON.parse(localStorage.getItem("nirwanaAccount")) || null;
+            } catch (e) {
+                return null;
+            }
+        }
+
+        function showAccount() {
+            const account = getAccount();
+            document.getElementById("accountUsername").value = account?.username || "";
+            document.getElementById("accountEmail").value = account?.email || "";
+            document.getElementById("accountPassword").value = "";
+            renderAccountStatus();
+            document.getElementById("accountOverlay").classList.add("show");
+        }
+
+        function closeAccount() {
+            document.getElementById("accountOverlay").classList.remove("show");
+        }
+
+        function renderAccountStatus() {
+            const account = getAccount();
+            const box = document.getElementById("accountStatus");
+            if (account) {
+                box.className = "account-status";
+                box.textContent = currentLanguage === "en"
+                    ? "Welcome back, " + account.username + "! ✨"
+                    : "Hai lagi, " + account.username + "! ✨ Akunmu sudah terdaftar.";
+            } else {
+                box.className = "";
+                box.textContent = "";
+            }
+        }
+
+        function showCuteNotification(username) {
+            document.getElementById("cuteNotificationTitle").textContent = "Yay! Akun Berhasil Dibuat 💕";
+            document.getElementById("cuteNotificationText").textContent =
+                "Selamat datang, " + username + "! 🧸✨ Sekarang kamu sudah jadi bagian dari Nirwana Baby Shop.";
+            document.getElementById("cuteNotification").classList.add("show");
+        }
+
+        function closeCuteNotification() {
+            document.getElementById("cuteNotification").classList.remove("show");
+        }
+
+        function getAccount() {
+            try { return JSON.parse(localStorage.getItem('nirwanaAccount') || 'null'); }
+            catch (e) { return null; }
+        }
+
+        function updateAccountNav() {
+            const account = getAccount();
+            const nav = document.getElementById('accountNavText');
+            if (nav) {
+                nav.textContent = account ? account.username : 'Akun';
+            }
+        }
+
+        function openAccountModal() {
+            const modal = document.getElementById('accountModal');
+            if (!modal) return;
+            const account = getAccount();
+            const title = modal.querySelector('h2');
+            const form = document.getElementById('accountForm');
+
+            if (account) {
+                if (title) title.textContent = 'Akun Saya';
+                if (form) {
+                    form.innerHTML = `
                 <div style="text-align:center;margin-bottom:18px">
                     <div style="font-size:48px">👤</div>
                     <h3 style="margin:8px 0">${escapeHtml(account.name)}</h3>
@@ -2697,11 +2640,11 @@ function openAccountModal(){
                 <button type="button" class="primary-btn" style="width:100%;margin-bottom:10px" onclick="logoutAccount()">Logout</button>
                 <button type="button" class="secondary-btn" style="width:100%" onclick="closeAccountModal()">Tutup</button>
             `;
-        }
-    }else{
-        if(title) title.textContent = 'Buat Akun';
-        if(form && !document.getElementById('accountName')){
-            form.innerHTML = `
+                }
+            } else {
+                if (title) title.textContent = 'Buat Akun';
+                if (form && !document.getElementById('accountName')) {
+                    form.innerHTML = `
                 <div class="form-group">
                     <label for="accountName">Nama</label>
                     <input type="text" id="accountName" required placeholder="Masukkan nama kamu">
@@ -2720,111 +2663,111 @@ function openAccountModal(){
                 </div>
                 <button type="submit" class="primary-btn" style="width:100%">Buat Akun</button>
             `;
-            form.onsubmit = saveAccount;
+                    form.onsubmit = saveAccount;
+                }
+            }
+            modal.style.display = 'flex';
         }
-    }
-    modal.style.display = 'flex';
-}
 
-function closeAccountModal(){
-    const modal = document.getElementById('accountModal');
-    if(modal) modal.style.display = 'none';
-}
+        function closeAccountModal() {
+            const modal = document.getElementById('accountModal');
+            if (modal) modal.style.display = 'none';
+        }
 
-function saveAccount(event){
-    if(event) event.preventDefault();
+        function saveAccount(event) {
+            if (event) event.preventDefault();
 
-    const username = document.getElementById('accountUsername')?.value.trim();
-    const email = document.getElementById('accountEmail')?.value.trim();
-    const password = document.getElementById('accountPassword')?.value;
+            const username = document.getElementById('accountUsername')?.value.trim();
+            const email = document.getElementById('accountEmail')?.value.trim();
+            const password = document.getElementById('accountPassword')?.value;
 
-    if(!username || !email || !password){
-        showCuteNotificationError('Ups! 😭', 'Username, Gmail, dan password wajib diisi ya.');
-        return false;
-    }
+            if (!username || !email || !password) {
+                showCuteNotificationError('Ups! 😭', 'Username, Gmail, dan password wajib diisi ya.');
+                return false;
+            }
 
-    if(!email.toLowerCase().endsWith('@gmail.com')){
-        showCuteNotificationError('Gmail dulu ya! 📧', 'Gunakan alamat Gmail yang valid, contohnya nama@gmail.com.');
-        return false;
-    }
+            if (!email.toLowerCase().endsWith('@gmail.com')) {
+                showCuteNotificationError('Gmail dulu ya! 📧', 'Gunakan alamat Gmail yang valid, contohnya nama@gmail.com.');
+                return false;
+            }
 
-    localStorage.setItem('nirwanaAccount', JSON.stringify({
-        username: username,
-        email: email,
-        password: password
-    }));
+            localStorage.setItem('nirwanaAccount', JSON.stringify({
+                username: username,
+                email: email,
+                password: password
+            }));
 
-    updateAccountNav();
-    closeAccount();
-    showCuteNotification(username);
+            updateAccountNav();
+            closeAccount();
+            showCuteNotification(username);
 
-    if(typeof pendingBuyAfterAccount === 'function'){
-        pendingBuyAfterAccount();
-    }
-    return false;
-}
+            if (typeof pendingBuyAfterAccount === 'function') {
+                pendingBuyAfterAccount();
+            }
+            return false;
+        }
 
-function showCuteNotificationError(title, text){
-    document.getElementById("cuteNotificationTitle").textContent = title;
-    document.getElementById("cuteNotificationText").textContent = text;
-    document.getElementById("cuteNotificationEmoji").textContent = "🥺";
-    document.getElementById("cuteNotification").classList.add("show");
-}
+        function showCuteNotificationError(title, text) {
+            document.getElementById("cuteNotificationTitle").textContent = title;
+            document.getElementById("cuteNotificationText").textContent = text;
+            document.getElementById("cuteNotificationEmoji").textContent = "🥺";
+            document.getElementById("cuteNotification").classList.add("show");
+        }
 
-function logoutAccount(){
-    localStorage.removeItem('nirwanaAccount');
-    updateAccountNav();
-    closeAccountModal();
-    alert('Kamu sudah logout.');
-}
+        function logoutAccount() {
+            localStorage.removeItem('nirwanaAccount');
+            updateAccountNav();
+            closeAccountModal();
+            alert('Kamu sudah logout.');
+        }
 
-function escapeHtml(text){
-    return String(text).replace(/[&<>"']/g, function(m){
-        return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]);
-    });
-}
+        function escapeHtml(text) {
+            return String(text).replace(/[&<>"']/g, function (m) {
+                return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m]);
+            });
+        }
 
-function showHistory(){
-    hideAllScreens();
-    document.getElementById("historyScreen").classList.add("active");
-    window.scrollTo({top:0,behavior:"smooth"});
-}
+        function showHistory() {
+            hideAllScreens();
+            document.getElementById("historyScreen").classList.add("active");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
 
 
-function createReceipt(paymentMethod){
-    const selected = cart.filter(item => item.selected);
-    if(selected.length === 0) return;
+        function createReceipt(paymentMethod) {
+            const selected = cart.filter(item => item.selected);
+            if (selected.length === 0) return;
 
-    let total = 0;
-    let jumlahBarang = 0;
+            let total = 0;
+            let jumlahBarang = 0;
 
-    selected.forEach(item=>{
-        total += item.price * item.quantity;
-        jumlahBarang += item.quantity;
-    });
+            selected.forEach(item => {
+                total += item.price * item.quantity;
+                jumlahBarang += item.quantity;
+            });
 
-    const now = new Date();
-    const nomorTransaksi =
-        "NB-" + now.getFullYear() +
-        String(now.getMonth()+1).padStart(2,"0") +
-        String(now.getDate()).padStart(2,"0") + "-" +
-        Math.floor(1000 + Math.random()*9000);
+            const now = new Date();
+            const nomorTransaksi =
+                "NB-" + now.getFullYear() +
+                String(now.getMonth() + 1).padStart(2, "0") +
+                String(now.getDate()).padStart(2, "0") + "-" +
+                Math.floor(1000 + Math.random() * 9000);
 
-    document.getElementById("receiptNumber").textContent = nomorTransaksi;
-    document.getElementById("receiptCount").textContent =
-        jumlahBarang + (currentLanguage==="en" ? " items" : " barang");
-    document.getElementById("receiptSubtotal").textContent =
-        "Rp " + formatRupiah(total);
-    document.getElementById("receiptTotal").textContent =
-        "Rp " + formatRupiah(total);
+            document.getElementById("receiptNumber").textContent = nomorTransaksi;
+            document.getElementById("receiptCount").textContent =
+                jumlahBarang + (currentLanguage === "en" ? " items" : " barang");
+            document.getElementById("receiptSubtotal").textContent =
+                "Rp " + formatRupiah(total);
+            document.getElementById("receiptTotal").textContent =
+                "Rp " + formatRupiah(total);
 
-    const receiptProducts = document.getElementById("receiptProducts");
-    receiptProducts.innerHTML = "";
+            const receiptProducts = document.getElementById("receiptProducts");
+            receiptProducts.innerHTML = "";
 
-    selected.forEach(item=>{
-        const product = document.createElement("div");
-        product.className = "receipt-product";
-        product.innerHTML = `
+            selected.forEach(item => {
+                const product = document.createElement("div");
+                product.className = "receipt-product";
+                product.innerHTML = `
             <div class="receipt-product-icon">📦</div>
             <div class="receipt-product-info">
                 <h4>${item.name}</h4>
@@ -2833,172 +2776,172 @@ function createReceipt(paymentMethod){
             <div class="receipt-product-price">
                 Rp ${formatRupiah(item.price * item.quantity)}
             </div>`;
-        receiptProducts.appendChild(product);
-    });
+                receiptProducts.appendChild(product);
+            });
 
-    // Simpan ID barang yang sedang dibeli.
-    // Barang BELUM dihapus dari keranjang sampai customer menekan Oke.
-    pendingPurchasedIds = selected.map(item => item.id);
+            // Simpan ID barang yang sedang dibeli.
+            // Barang BELUM dihapus dari keranjang sampai customer menekan Oke.
+            pendingPurchasedIds = selected.map(item => item.id);
 
-    document.querySelectorAll(".receipt-payment-row").forEach(el=>el.remove());
+            document.querySelectorAll(".receipt-payment-row").forEach(el => el.remove());
 
-    // Tampilkan struk
-    document.getElementById("receiptOverlay").classList.add("show");
-}
+            // Tampilkan struk
+            document.getElementById("receiptOverlay").classList.add("show");
+        }
 
-/* =====================================================
-   SCREEN CONTROL
-===================================================== */
+        /* =====================================================
+           SCREEN CONTROL
+        ===================================================== */
 
-function hideAllScreens(){
+        function hideAllScreens() {
 
-    document
-    .querySelectorAll(".screen")
-    .forEach(screen => {
+            document
+                .querySelectorAll(".screen")
+                .forEach(screen => {
 
-        screen.classList.remove("active");
+                    screen.classList.remove("active");
 
-    });
+                });
 
-}
-
-
-function showHome(){
-
-    hideAllScreens();
-
-    document
-    .getElementById("homeScreen")
-    .classList.add("active");
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-}
+        }
 
 
-function showCart(){
+        function showHome() {
 
-    hideAllScreens();
+            hideAllScreens();
 
-    document
-    .getElementById("cartScreen")
-    .classList.add("active");
+            document
+                .getElementById("homeScreen")
+                .classList.add("active");
 
-    renderCart();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
 
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-}
+        }
 
 
+        function showCart() {
 
-/* =====================================================
-   OPEN CATEGORY
-===================================================== */
+            hideAllScreens();
 
-function openCategory(index){
+            document
+                .getElementById("cartScreen")
+                .classList.add("active");
 
-    hideAllScreens();
+            renderCart();
 
-    document
-    .getElementById("categoryScreen")
-    .classList.add("active");
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
 
-
-    const category =
-        categories[index];
-
-
-    document
-    .getElementById("categoryPageTitle")
-    .textContent =
-        trCategoryName(category);
-
-
-    document
-    .getElementById("categoryPageDescription")
-    .textContent =
-        trDescription(category);
-
-
-    renderCategory(category);
-
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-}
+        }
 
 
 
-/* =====================================================
-   RENDER CATEGORY
-===================================================== */
+        /* =====================================================
+           OPEN CATEGORY
+        ===================================================== */
 
-function renderCategory(category){
+        function openCategory(index) {
 
-    const container =
-        document.getElementById(
-            "categoryProducts"
-        );
+            hideAllScreens();
 
-
-    container.innerHTML="";
+            document
+                .getElementById("categoryScreen")
+                .classList.add("active");
 
 
-    if(category.type === "clothes"){
+            const category =
+                categories[index];
 
-        createGenderSection(
+
+            document
+                .getElementById("categoryPageTitle")
+                .textContent =
+                trCategoryName(category);
+
+
+            document
+                .getElementById("categoryPageDescription")
+                .textContent =
+                trDescription(category);
+
+
+            renderCategory(category);
+
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+
+        /* =====================================================
+           RENDER CATEGORY
+        ===================================================== */
+
+        function renderCategory(category) {
+
+            const container =
+                document.getElementById(
+                    "categoryProducts"
+                );
+
+
+            container.innerHTML = "";
+
+
+            if (category.type === "clothes") {
+
+                createGenderSection(
+                    container,
+                    currentLanguage === "en" ? "👦 Boy" : "👦 Boy",
+                    category.boy
+                );
+
+
+                createGenderSection(
+                    container,
+                    "👧 Girl",
+                    category.girl
+                );
+
+            }
+
+            else {
+
+                createProductList(
+                    container,
+                    category.products
+                );
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           GENDER SECTION
+        ===================================================== */
+
+        function createGenderSection(
             container,
-            currentLanguage==="en" ? "👦 Boy" : "👦 Boy",
-            category.boy
-        );
+            title,
+            products
+        ) {
+
+            const section =
+                document.createElement("div");
 
 
-        createGenderSection(
-            container,
-            "👧 Girl",
-            category.girl
-        );
-
-    }
-
-    else{
-
-        createProductList(
-            container,
-            category.products
-        );
-
-    }
-
-}
-
-
-
-/* =====================================================
-   GENDER SECTION
-===================================================== */
-
-function createGenderSection(
-    container,
-    title,
-    products
-){
-
-    const section =
-        document.createElement("div");
-
-
-    section.innerHTML = `
+            section.innerHTML = `
 
         <div class="gender-title">
 
@@ -3013,48 +2956,48 @@ function createGenderSection(
     `;
 
 
-    const list =
-        document.createElement("div");
+            const list =
+                document.createElement("div");
 
 
-    list.className =
-        "product-list";
+            list.className =
+                "product-list";
 
 
-    products.forEach(
-        product => {
+            products.forEach(
+                product => {
 
-            list.appendChild(
-                createClothesProduct(product)
+                    list.appendChild(
+                        createClothesProduct(product)
+                    );
+
+                }
             );
 
+
+            section.appendChild(list);
+
+            container.appendChild(section);
+
         }
-    );
-
-
-    section.appendChild(list);
-
-    container.appendChild(section);
-
-}
 
 
 
-/* =====================================================
-   CLOTHES PRODUCT
-===================================================== */
+        /* =====================================================
+           CLOTHES PRODUCT
+        ===================================================== */
 
-function createClothesProduct(product){
+        function createClothesProduct(product) {
 
-    const row =
-        document.createElement("div");
-
-
-    row.className =
-        "product-row";
+            const row =
+                document.createElement("div");
 
 
-    row.innerHTML = `
+            row.className =
+                "product-row";
+
+
+            row.innerHTML = `
 
         <div class="product-photo">
 
@@ -3098,57 +3041,57 @@ function createClothesProduct(product){
                 )
             "
         >
-            ${currentLanguage==="en" ? "BUY" : "BELI"}
+            ${currentLanguage === "en" ? "BUY" : "BELI"}
         </button>
 
     `;
 
 
-    return row;
+            return row;
 
-}
-
-
-
-/* =====================================================
-   PRODUCT LIST
-===================================================== */
-
-function createProductList(
-    container,
-    products
-){
-
-    const list =
-        document.createElement("div");
+        }
 
 
-    list.className =
-        "product-list";
 
+        /* =====================================================
+           PRODUCT LIST
+        ===================================================== */
 
-    products.forEach(
-        product => {
+        function createProductList(
+            container,
+            products
+        ) {
 
-            const name =
-                product[0];
-
-            const price =
-                product[1];
-
-            const image =
-                product[2];
-
-
-            const row =
+            const list =
                 document.createElement("div");
 
 
-            row.className =
-                "product-row";
+            list.className =
+                "product-list";
 
 
-            row.innerHTML = `
+            products.forEach(
+                product => {
+
+                    const name =
+                        product[0];
+
+                    const price =
+                        product[1];
+
+                    const image =
+                        product[2];
+
+
+                    const row =
+                        document.createElement("div");
+
+
+                    row.className =
+                        "product-row";
+
+
+                    row.innerHTML = `
 
                 <div class="product-photo">
 
@@ -3198,114 +3141,114 @@ function createProductList(
             `;
 
 
-            list.appendChild(row);
+                    list.appendChild(row);
+
+                }
+            );
+
+
+            container.appendChild(list);
 
         }
-    );
-
-
-    container.appendChild(list);
-
-}
 
 
 
-/* =====================================================
-   ADD TO CART
-===================================================== */
+        /* =====================================================
+           ADD TO CART
+        ===================================================== */
 
-function addToCart(
-    name,
-    price,
-    image
-){
+        function addToCart(
+            name,
+            price,
+            image
+        ) {
 
-    const existing =
-        cart.find(
-            item => item.name === name
-        );
-
-
-    if(existing){
-
-        existing.quantity++;
-
-    }
-
-    else{
-
-        cart.push({
-
-            id:Date.now(),
-
-            name:name,
-
-            price:price,
-
-            image:image,
-
-            quantity:1,
-
-            selected:true
-
-        });
-
-    }
+            const existing =
+                cart.find(
+                    item => item.name === name
+                );
 
 
-    updateCartNumber();
+            if (existing) {
+
+                existing.quantity++;
+
+            }
+
+            else {
+
+                cart.push({
+
+                    id: Date.now(),
+
+                    name: name,
+
+                    price: price,
+
+                    image: image,
+
+                    quantity: 1,
+
+                    selected: true
+
+                });
+
+            }
 
 
-    showMiniNotification(
-        "🛒 " + name +
-        " masuk keranjang!"
-    );
-
-}
+            updateCartNumber();
 
 
-
-/* =====================================================
-   CART NUMBER
-===================================================== */
-
-function updateCartNumber(){
-
-    let total = 0;
-
-
-    cart.forEach(
-        item => {
-
-            total += item.quantity;
+            showMiniNotification(
+                "🛒 " + name +
+                " masuk keranjang!"
+            );
 
         }
-    );
-
-
-    document
-    .getElementById("cartNumber")
-    .textContent = total;
-
-}
 
 
 
-/* =====================================================
-   RENDER CART
-===================================================== */
+        /* =====================================================
+           CART NUMBER
+        ===================================================== */
 
-function renderCart(){
+        function updateCartNumber() {
 
-    const container =
-        document.getElementById(
-            "cartContent"
-        );
+            let total = 0;
 
 
-    if(cart.length === 0){
+            cart.forEach(
+                item => {
 
-        container.innerHTML = `
+                    total += item.quantity;
+
+                }
+            );
+
+
+            document
+                .getElementById("cartNumber")
+                .textContent = total;
+
+        }
+
+
+
+        /* =====================================================
+           RENDER CART
+        ===================================================== */
+
+        function renderCart() {
+
+            const container =
+                document.getElementById(
+                    "cartContent"
+                );
+
+
+            if (cart.length === 0) {
+
+                container.innerHTML = `
 
             <div class="empty-cart">
 
@@ -3338,12 +3281,12 @@ function renderCart(){
 
         `;
 
-        return;
+                return;
 
-    }
+            }
 
 
-    container.innerHTML = `
+            container.innerHTML = `
 
         <div
             class="cart-items"
@@ -3393,24 +3336,24 @@ function renderCart(){
     `;
 
 
-    const itemsContainer =
-        document.getElementById(
-            "cartItems"
-        );
+            const itemsContainer =
+                document.getElementById(
+                    "cartItems"
+                );
 
 
-    cart.forEach(
-        (item,index) => {
+            cart.forEach(
+                (item, index) => {
 
-            const row =
-                document.createElement("div");
-
-
-            row.className =
-                "cart-item";
+                    const row =
+                        document.createElement("div");
 
 
-            row.innerHTML = `
+                    row.className =
+                        "cart-item";
+
+
+                    row.innerHTML = `
 
                 <input
                     type="checkbox"
@@ -3480,395 +3423,396 @@ function renderCart(){
             `;
 
 
-            itemsContainer.appendChild(row);
+                    itemsContainer.appendChild(row);
+
+                }
+            );
+
+
+            updateCartSummary();
 
         }
-    );
-
-
-    updateCartSummary();
-
-}
 
 
 
-/* =====================================================
-   CHECKBOX
-===================================================== */
+        /* =====================================================
+           CHECKBOX
+        ===================================================== */
 
-function toggleSelected(
-    index,
-    checked
-){
+        function toggleSelected(
+            index,
+            checked
+        ) {
 
-    cart[index].selected =
-        checked;
-
-
-    updateCartSummary();
-
-}
+            cart[index].selected =
+                checked;
 
 
+            updateCartSummary();
 
-/* =====================================================
-   QUANTITY +
-===================================================== */
-
-function increaseQuantity(index){
-
-    cart[index].quantity++;
-
-    renderCart();
-
-    updateCartNumber();
-
-}
+        }
 
 
 
-/* =====================================================
-   QUANTITY -
-===================================================== */
+        /* =====================================================
+           QUANTITY +
+        ===================================================== */
 
-function decreaseQuantity(index){
+        function increaseQuantity(index) {
 
-    cart[index].quantity--;
+            cart[index].quantity++;
 
+            renderCart();
 
-    if(
-        cart[index].quantity <= 0
-    ){
+            updateCartNumber();
 
-        cart.splice(index,1);
-
-    }
-
-
-    renderCart();
-
-    updateCartNumber();
-
-}
+        }
 
 
 
-/* =====================================================
-   CART SUMMARY
-===================================================== */
+        /* =====================================================
+           QUANTITY -
+        ===================================================== */
 
-function updateCartSummary(){
+        function decreaseQuantity(index) {
 
-    let total = 0;
-
-    let selectedCount = 0;
+            cart[index].quantity--;
 
 
-    cart.forEach(
-        item => {
+            if (
+                cart[index].quantity <= 0
+            ) {
 
-            if(item.selected){
+                cart.splice(index, 1);
 
-                total +=
-                    item.price *
-                    item.quantity;
+            }
 
-                selectedCount +=
-                    item.quantity;
+
+            renderCart();
+
+            updateCartNumber();
+
+        }
+
+
+
+        /* =====================================================
+           CART SUMMARY
+        ===================================================== */
+
+        function updateCartSummary() {
+
+            let total = 0;
+
+            let selectedCount = 0;
+
+
+            cart.forEach(
+                item => {
+
+                    if (item.selected) {
+
+                        total +=
+                            item.price *
+                            item.quantity;
+
+                        selectedCount +=
+                            item.quantity;
+
+                    }
+
+                }
+            );
+
+
+            const totalElement =
+                document.getElementById(
+                    "cartTotal"
+                );
+
+
+            const countElement =
+                document.getElementById(
+                    "selectedCount"
+                );
+
+
+            if (totalElement) {
+
+                totalElement.textContent =
+                    "Rp " +
+                    formatRupiah(total);
+
+            }
+
+
+            if (countElement) {
+
+                countElement.textContent =
+                    selectedCount +
+                    " barang";
 
             }
 
         }
-    );
 
 
-    const totalElement =
-        document.getElementById(
-            "cartTotal"
-        );
 
+        /* =====================================================
+           BELI SEKARANG
+           SEKARANG LANGSUNG MENAMPILKAN STRUK
+        ===================================================== */
 
-    const countElement =
-        document.getElementById(
-            "selectedCount"
-        );
+        function buySelected() {
 
+            const account = getAccount();
 
-    if(totalElement){
+            // Wajib punya akun sebelum memesan
+            if (!account) {
+                pendingBuyAfterAccount = function () {
+                    buySelected();
+                };
 
-        totalElement.textContent =
-            "Rp " +
-            formatRupiah(total);
+                showAccount();
+                return;
+            }
 
-    }
+            // Cek barang yang dipilih
+            const selected = cart.filter(item => item.selected);
 
+            if (selected.length === 0) {
+                showCuteNotificationError(
+                    currentLanguage === "en" ? "Oops! 😭" : "Ups! 😭",
+                    currentLanguage === "en"
+                        ? "Please select at least one item to order."
+                        : "Pilih minimal satu barang yang mau dipesan ya!"
+                );
+                return;
+            }
 
-    if(countElement){
+            // Langsung tampilkan struk
+            createReceipt();
+        }
 
-        countElement.textContent =
-            selectedCount +
-            " barang";
 
-    }
 
-}
+        /* =====================================================
+           TUTUP STRUK
+        ===================================================== */
 
+        function finishOrder() {
 
+            // Hapus hanya barang yang benar-benar sudah dipesan
+            // setelah customer menekan tombol "Oke, Terima Kasih".
+            if (pendingPurchasedIds.length > 0) {
+                cart = cart.filter(
+                    item => !pendingPurchasedIds.includes(item.id)
+                );
+            }
 
-/* =====================================================
-   BELI SEKARANG
-   SEKARANG LANGSUNG MENAMPILKAN STRUK
-===================================================== */
+            pendingPurchasedIds = [];
 
-function buySelected(){
+            updateCartNumber();
 
-    const account = getAccount();
+            document
+                .getElementById(
+                    "receiptOverlay"
+                )
+                .classList.remove("show");
 
-    // Wajib punya akun sebelum memesan
-    if(!account){
-        pendingBuyAfterAccount = function(){
-            buySelected();
-        };
-
-        showAccount();
-        return;
-    }
-
-    // Cek barang yang dipilih
-    const selected = cart.filter(item => item.selected);
-
-    if(selected.length === 0){
-        showCuteNotificationError(
-            currentLanguage === "en" ? "Oops! 😭" : "Ups! 😭",
-            currentLanguage === "en"
-                ? "Please select at least one item to order."
-                : "Pilih minimal satu barang yang mau dipesan ya!"
-        );
-        return;
-    }
-
-    // Langsung tampilkan struk
-    createReceipt();
-}
-
-
-
-/* =====================================================
-   TUTUP STRUK
-===================================================== */
-
-function finishOrder(){
-
-    // Hapus hanya barang yang benar-benar sudah dipesan
-    // setelah customer menekan tombol "Oke, Terima Kasih".
-    if(pendingPurchasedIds.length > 0){
-        cart = cart.filter(
-            item => !pendingPurchasedIds.includes(item.id)
-        );
-    }
-
-    pendingPurchasedIds = [];
-
-    updateCartNumber();
-
-    document
-        .getElementById(
-            "receiptOverlay"
-        )
-        .classList.remove("show");
-
-    // Kembali ke keranjang dengan isi terbaru
-    showCart();
-
-}
-
-
-
-/* =====================================================
-   MINI NOTIFICATION
-===================================================== */
-
-function showMiniNotification(message){
-
-    const notification =
-        document.createElement("div");
-
-
-    notification.textContent =
-        message;
-
-
-    notification.style.position =
-        "fixed";
-
-    notification.style.bottom =
-        "25px";
-
-    notification.style.left =
-        "50%";
-
-    notification.style.transform =
-        "translateX(-50%)";
-
-    notification.style.background =
-        "#345f5d";
-
-    notification.style.color =
-        "white";
-
-    notification.style.padding =
-        "13px 22px";
-
-    notification.style.borderRadius =
-        "30px";
-
-    notification.style.zIndex =
-        "6000";
-
-    notification.style.boxShadow =
-        "0 8px 25px rgba(0,0,0,.2)";
-
-
-    document.body.appendChild(
-        notification
-    );
-
-
-    setTimeout(
-        () => {
-
-            notification.remove();
-
-        },
-        2200
-    );
-
-}
-
-
-
-/* =====================================================
-   RUPIAH
-===================================================== */
-
-function formatRupiah(number){
-
-    return Number(number)
-        .toLocaleString("id-ID");
-
-}
-
-
-
-/* =====================================================
-   ESCAPE TEXT
-===================================================== */
-
-function escapeString(text){
-
-    return text
-        .replace(/'/g,"\\'");
-
-}
-
-
-
-/* =====================================================
-   HERO SLIDER
-===================================================== */
-
-let heroIndex = 0;
-
-
-function changeHero(index){
-
-    const slides =
-        document.querySelectorAll(
-            ".hero-slide"
-        );
-
-
-    const dots =
-        document.querySelectorAll(
-            ".hero-dot"
-        );
-
-
-    slides.forEach(
-        slide =>
-            slide.classList.remove(
-                "active"
-            )
-    );
-
-
-    dots.forEach(
-        dot =>
-            dot.classList.remove(
-                "active"
-            )
-    );
-
-
-    slides[index]
-        .classList.add("active");
-
-
-    dots[index]
-        .classList.add("active");
-
-
-    heroIndex = index;
-
-}
-
-
-setInterval(
-    function(){
-
-        heroIndex++;
-
-
-        if(heroIndex >= 3){
-
-            heroIndex = 0;
+            // Kembali ke keranjang dengan isi terbaru
+            showCart();
 
         }
 
 
-        changeHero(heroIndex);
 
-    },
-    5000
-);
+        /* =====================================================
+           MINI NOTIFICATION
+        ===================================================== */
+
+        function showMiniNotification(message) {
+
+            const notification =
+                document.createElement("div");
+
+
+            notification.textContent =
+                message;
+
+
+            notification.style.position =
+                "fixed";
+
+            notification.style.bottom =
+                "25px";
+
+            notification.style.left =
+                "50%";
+
+            notification.style.transform =
+                "translateX(-50%)";
+
+            notification.style.background =
+                "#345f5d";
+
+            notification.style.color =
+                "white";
+
+            notification.style.padding =
+                "13px 22px";
+
+            notification.style.borderRadius =
+                "30px";
+
+            notification.style.zIndex =
+                "6000";
+
+            notification.style.boxShadow =
+                "0 8px 25px rgba(0,0,0,.2)";
+
+
+            document.body.appendChild(
+                notification
+            );
+
+
+            setTimeout(
+                () => {
+
+                    notification.remove();
+
+                },
+                2200
+            );
+
+        }
 
 
 
-/* =====================================================
-   SCROLL CATEGORY
-===================================================== */
+        /* =====================================================
+           RUPIAH
+        ===================================================== */
 
-function scrollToCategory(){
+        function formatRupiah(number) {
 
-    document
-        .getElementById(
-            "categorySection"
-        )
-        .scrollIntoView({
+            return Number(number)
+                .toLocaleString("id-ID");
 
-            behavior:"smooth"
+        }
 
-        });
 
-}
 
-setLanguage("id");
-updateAccountNav();
-renderAccountStatus();
+        /* =====================================================
+           ESCAPE TEXT
+        ===================================================== */
 
-</script>
+        function escapeString(text) {
+
+            return text
+                .replace(/'/g, "\\'");
+
+        }
+
+
+
+        /* =====================================================
+           HERO SLIDER
+        ===================================================== */
+
+        let heroIndex = 0;
+
+
+        function changeHero(index) {
+
+            const slides =
+                document.querySelectorAll(
+                    ".hero-slide"
+                );
+
+
+            const dots =
+                document.querySelectorAll(
+                    ".hero-dot"
+                );
+
+
+            slides.forEach(
+                slide =>
+                    slide.classList.remove(
+                        "active"
+                    )
+            );
+
+
+            dots.forEach(
+                dot =>
+                    dot.classList.remove(
+                        "active"
+                    )
+            );
+
+
+            slides[index]
+                .classList.add("active");
+
+
+            dots[index]
+                .classList.add("active");
+
+
+            heroIndex = index;
+
+        }
+
+
+        setInterval(
+            function () {
+
+                heroIndex++;
+
+
+                if (heroIndex >= 3) {
+
+                    heroIndex = 0;
+
+                }
+
+
+                changeHero(heroIndex);
+
+            },
+            5000
+        );
+
+
+
+        /* =====================================================
+           SCROLL CATEGORY
+        ===================================================== */
+
+        function scrollToCategory() {
+
+            document
+                .getElementById(
+                    "categorySection"
+                )
+                .scrollIntoView({
+
+                    behavior: "smooth"
+
+                });
+
+        }
+
+        setLanguage("id");
+        updateAccountNav();
+        renderAccountStatus();
+
+    </script>
 
 </body>
+
 </html>
 
 <script>document.addEventListener('DOMContentLoaded', updateAccountNav);</script>
